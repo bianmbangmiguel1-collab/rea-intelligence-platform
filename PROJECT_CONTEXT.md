@@ -12,57 +12,55 @@
 
 ## Statut actuel
 
-- Phase active : **phase 2 — spécifications fonctionnelles et conception logique ; revue documentaire préparatoire effectuée**.
-- Phase 1 — audit technique REA : **incomplète** ; aucune révision de référence ni rapport d'audit n'est consigné.
-- Phase 3 — sécurité et exploitation : **conception et revue documentaire préliminaires effectuées ; décisions et validation du propriétaire ouvertes**.
+- Phase active : **phase 3 — conception sécurité/exploitation documentaire ; périmètre de pilote et rôles approuvés, autres décisions et validation globale en attente**.
+- Phase 1 — audit technique REA : **incomplète** ; révision immuable approuvée, audit documentaire non effectué.
+- Phase 2 — conception fonctionnelle : revue documentaire préparatoire effectuée ; approbation formelle globale en attente.
 - Phase 4 — porte avant réalisation : **non franchie**.
-- Code applicatif, installation d'outils, exécution de REA, analyse d'une cible réelle et déploiement : **non effectués**. Ils ne commencent pas tant que les portes du dépôt ne sont pas satisfaites.
-- Les commandes, capacités, formats, transports, sessions, preuves et prérequis REA issus de notes antérieures restent des **hypothèses** jusqu'à audit d'une révision précise.
-- Les avis des revues sont documentaires ; ils ne valent pas approbation du propriétaire, audit technique, recette ni preuve de sécurité.
+- Code applicatif, installation d'outils, exécution REA, analyse d'une cible réelle et déploiement : **non effectués** ; restent interdits avant satisfaction des portes applicables.
+- Les comportements, commandes, capacités, formats, transports, sessions, preuves et prérequis REA restent non vérifiés jusqu'à audit sourcé de la révision approuvée.
+- Les avis documentaires ne valent pas audit technique, recette, preuve de sécurité ou autorisation de déploiement.
 
-## Cadrage en cours — à confirmer
+## Cadrage approuvé ou restant à confirmer
 
-1. Intégrer le moteur officiel REA ; ne pas le réécrire et ne pas modifier son dépôt.
-2. Architecture hybride visée : web/cloud, backend central, agents locaux et runners adaptés.
-3. Windows prioritaire pour l'agent initial, sous réserve de compatibilité auditée.
-4. Usage initial personnel, extensible ; pas de portée commerciale multi-utilisateur présumée.
+1. **Approuvé le 2026-11-10 :** pilote personnel mono-propriétaire, limites, exclusions, modèle de rôles et d'approbation ; détail dans `docs/03-governance/pilot-scope-decisions.md`.
+2. **Approuvé le 2026-11-10 :** révision REA à auditer : `morluto/rea` commit `3345019fe1341db40c26af3463e136fcb7c7d11e`. Audit et revue de licence non effectués.
+3. Architecture hybride visée : web/cloud, backend central, agents locaux et runners adaptés — proposition.
+4. Windows prioritaire pour l'agent initial, sous réserve de compatibilité auditée.
 5. OpenRouter envisagé, sans décision technique ni autorisation de transfert de données ; mode sans IA requis dans la conception.
-6. Orientations d'architecture enregistrées dans les ADR à confirmer selon leur statut et l'approbation explicite.
-
-Les technologies de stockage, file, identité, transport et hébergement demeurent proposées jusqu'à décision et vérification.
+6. Technologies de stockage, file, identité, transport et hébergement demeurent à décider et vérifier.
+7. Les titulaires individuels des rôles et l'auditeur REA restent à désigner.
 
 ## Phases et portes
 
 | Phase | Objet | État |
 | --- | --- | --- |
 | 0 | Cadrage initial et dépôt documentaire | Terminé au niveau initial |
-| 1 | Audit reproductible d'une révision précise de REA | Incomplet / dépendance ouverte |
-| 2 | Spécifications fonctionnelles et conception logique | Revue documentaire effectuée ; validation du propriétaire et arbitrages en attente |
-| 3 | Conception détaillée sécurité, agent et exploitation | Conception/revue préliminaires effectuées ; décisions et validation ouvertes |
+| 1 | Audit reproductible d'une révision précise de REA | Référence approuvée ; audit incomplet |
+| 2 | Spécifications fonctionnelles et conception logique | Revue documentaire effectuée ; validation formelle en attente |
+| 3 | Conception détaillée sécurité, agent et exploitation | Périmètre pilote/rôles approuvés ; autres décisions ouvertes |
 | 4 | Revue de conception et décision de démarrer la réalisation | Bloquée ; prérequis non clos et validation explicite absente |
 | 5+ | Développement, tests et déploiement | Pas commencé / bloqué par les portes du projet |
 
-Les critères applicables sont dans [`docs/06-roadmap/roadmap.md`](docs/06-roadmap/roadmap.md). Les avis de revue sont consignés dans [`docs/03-governance/phase-review.md`](docs/03-governance/phase-review.md). La demande de démarrage du codage ne clôt pas l'audit REA ni les validations fonctionnelles et sécurité exigées par les règles du dépôt.
+Les critères applicables sont dans `docs/06-roadmap/roadmap.md`. Les avis et décisions sont consignés dans `docs/03-governance/phase-review.md`.
 
 ## Questions prioritaires ouvertes
 
-- Quel pilote minimal, profils d'utilisateurs, cas d'usage, cibles et opérations autorisées/interdites ?
-- Quelle révision immuable de `morluto/rea` sera auditée, et quelles étapes nécessitent une autorisation séparée ?
-- Quels outils/interfaces, transports, schémas, capacités, états, sessions, preuves et erreurs sont réellement documentés dans cette révision ?
+- Qui sont les titulaires individuels des rôles d'approbateur et d'auditeur REA ?
+- Quels constats, interfaces, transports, capacités, états, sessions, preuves, erreurs, dépendances et licences sont documentés dans le commit approuvé ?
 - Quelles capacités et conditions sont compatibles avec Windows et Linux ?
 - Quel fournisseur d'identité, hébergement, région, base, file et stockage seront retenus ?
 - Quel modèle d'enrôlement, de transport, d'isolation, de mise à jour et de révocation agent est acceptable ?
-- Quelles données pourront être transmises à un fournisseur IA, avec quel consentement, quelle rétention et quelles conditions ?
-- Quels seuils de performance, disponibilité, budget, support et durée de conservation sont souhaités ?
+- Quelles données pourront être transmises à un fournisseur IA, avec quel consentement et quelle rétention ?
+- Quels seuils de performance, disponibilité, budget, support et conservation sont souhaités ?
 - Quels risques résiduels peuvent être acceptés, par qui et avec quelle justification ?
 
 ## Prochaine action
 
-Le propriétaire examine les [revues fonctionnelle, sécurité et de phase](docs/03-governance/phase-review.md) et consigne ses décisions. Ensuite, choisir une révision immuable de REA et produire un audit sourcé ; préciser les décisions de phase 3 et les critères de vérification. La réalisation demeure bloquée jusqu'à satisfaction de la porte de phase 4 et des règles `AGENTS.md`.
+Désigner l'auditeur et consigner les titulaires des rôles, puis réaliser l'audit documentaire en lecture seule du commit REA approuvé et produire les constats sourcés. Poursuivre les arbitrages sécurité/exploitation ; ne pas franchir la porte de réalisation sans clôture des prérequis et décision explicite.
 
 ## Journal de continuité
 
-- Le dépôt contient une première spécification fonctionnelle, une architecture logique, une analyse de menace initiale, un modèle conceptuel, des contrats API proposés, une roadmap et des ADR.
-- La documentation comprend une charte, un index documentaire, un plan d'audit REA, un registre initial des risques, une gouvernance données/IA, un cadre de traçabilité/validation, un agenda et une conception sécurité/exploitation préliminaire.
-- Cette tâche ajoute les revues documentaires fonctionnelle et sécurité ainsi qu'un relevé explicite de l'état des portes.
-- Aucun audit technique de REA, test, installation, analyse sur cible, développement ou déploiement n'a été effectué.
+- Le dépôt contient les spécifications fonctionnelles, l'architecture logique, l'analyse de menace, le modèle conceptuel, les contrats API proposés, les ADR et la roadmap.
+- La documentation comprend le plan d'audit REA, le registre de risques, la gouvernance données/IA, la traçabilité, l'agenda phase 3, la conception sécurité/exploitation et les revues préparatoires.
+- Le 2026-11-10, le propriétaire a approuvé le périmètre minimal du pilote, le modèle de rôles et d'approbation ainsi que le SHA REA à auditer ; les documents de décision, d'audit et de revue ont été actualisés.
+- Aucun audit technique ou test, installation, exécution REA, analyse sur cible, développement ou déploiement n'a été effectué.

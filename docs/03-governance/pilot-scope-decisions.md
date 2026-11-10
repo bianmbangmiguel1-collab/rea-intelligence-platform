@@ -1,76 +1,72 @@
 # Décisions de cadrage — pilote phase 3
 
-**Statut :** proposition documentaire préparée le 2026-11-10 ; approbation explicite du propriétaire du projet requise. Les éléments ci-dessous ne valent ni validation de sécurité, ni autorisation d'exécuter REA ou d'analyser une cible, ni autorisation de réalisation.
+**Statut :** périmètre, modèle de rôles et référence d'audit approuvés par le propriétaire du projet le 2026-11-10. Décision documentaire uniquement ; elle ne vaut ni validation technique de sécurité, ni autorisation d'exécuter REA ou d'analyser une cible réelle, ni autorisation de réalisation.
 
-## 1. Proposition de périmètre minimal du pilote
+## 1. Périmètre minimal du pilote — approuvé
 
-| Sujet | Proposition à valider | Limite / statut |
+| Sujet | Décision approuvée | Limite |
 | --- | --- | --- |
-| Mode d'usage | Usage personnel, mono-propriétaire, sans comptes invités ni service multi-tenant | Proposition ; à confirmer par le propriétaire |
-| Cible | Uniquement systèmes de laboratoire ou appareils appartenant à l'utilisateur, ou couverts par une autorisation écrite explicite et limitée | Aucune cible réelle n'est autorisée par ce document |
-| Cas d'usage | Étude documentaire et expérimentation contrôlée ; collecte et présentation de résultats non destructifs uniquement après autorisation séparée et porte de réalisation applicable | L'audit REA et toute expérimentation restent à autoriser séparément |
-| Portée | Une tâche doit être liée à un projet, une cible, une finalité, une fenêtre de validité et des exclusions explicitement consignées | Refus par défaut si une donnée de portée manque ou est ambiguë |
-| Données | Données synthétiques ou de laboratoire de préférence ; données personnelles, secrets et données de tiers exclus du pilote initial | Aucune transmission à un service IA autorisée ; mode sans IA obligatoire par défaut |
-| Plateformes | Windows envisagé en priorité, sans déclaration de compatibilité avant audit et validation | Hypothèse de cadrage, pas un fait vérifié |
-| Multi-utilisateur | Exclu du pilote initial ; pas de partage public ni d'accès inter-projets | Toute extension nécessite une nouvelle décision et une revue |
+| Mode d'usage | Usage personnel, mono-propriétaire, sans comptes invités ni service multi-tenant | Pas de partage public ni d'accès inter-projets |
+| Cibles | Systèmes de laboratoire ou appareils appartenant à l'utilisateur, ou couverts par une autorisation écrite explicite et limitée | Cette décision n'autorise aucune cible réelle ni aucun essai |
+| Cas d'usage | Étude documentaire et expérimentation contrôlée ; opérations de lecture/non destructives uniquement après autorisation séparée et franchissement des portes applicables | Capacités REA à auditer avant toute intégration |
+| Portée des tâches | Projet, cible, finalité, fenêtre de validité et exclusions doivent être explicitement consignés | Refus par défaut si une donnée de portée manque ou est ambiguë |
+| Données | Données synthétiques ou de laboratoire de préférence ; données personnelles, secrets et données de tiers exclus du pilote initial | Aucune transmission IA autorisée ; mode sans IA par défaut |
+| Plateforme initiale | Windows prioritaire, sous réserve d'audit et de vérification de compatibilité | Hypothèse à vérifier, pas une compatibilité déclarée |
+| Multi-utilisateur | Exclu du pilote initial | Toute extension nécessite une nouvelle décision et une revue |
 
-### Opérations proposées comme permises sous autorisation explicite ultérieure
+### Opérations admissibles uniquement après autorisation distincte
 
-- Consulter la documentation et les sources d'une révision REA épinglée dans le cadre de l'audit autorisé.
-- Décrire des exigences et préparer des scénarios de vérification documentaires, sans les exécuter.
-- Après franchissement des portes applicables, envisager des opérations de lecture/non destructives sur un laboratoire explicitement autorisé, limitées au périmètre approuvé et aux capacités préalablement auditées.
+- Examiner la documentation et les sources de la révision REA épinglée, dans les limites de l'audit documentaire autorisé.
+- Préparer des exigences et scénarios de vérification sans les exécuter.
+- Après satisfaction des portes et autorisations applicables, envisager des opérations de lecture/non destructives sur un laboratoire explicitement autorisé et limité au périmètre approuvé.
 
-Cette liste ne constitue pas une autorisation d'exécuter ces opérations maintenant.
+Cette liste ne constitue pas une autorisation d'exécuter REA ou d'opérer sur une cible maintenant.
 
-### Opérations exclues du pilote proposé
+### Exclusions approuvées
 
-- Toute cible publique, tierce ou non explicitement autorisée ; toute découverte ou extension automatique du périmètre.
-- Toute action destructive, modification persistante, exploitation, élévation de privilèges, contournement de contrôle, persistance, collecte ou extraction d'identifiants, mouvement latéral ou déni de service.
-- Toute commande système arbitraire, exécution automatique de fichiers/imports non fiables, ou action déclenchée par une sortie IA.
-- Toute exécution REA, installation d'outils, analyse sur cible réelle, déploiement ou code applicatif avant satisfaction des portes du projet et autorisation distincte.
-- Tout transfert de données vers OpenRouter ou un autre fournisseur IA tant que données autorisées, consentement, rétention et fournisseur n'ont pas fait l'objet d'une décision explicite.
+- Cible publique, tierce ou non explicitement autorisée ; découverte ou extension automatique du périmètre.
+- Action destructive ou persistante, exploitation, élévation de privilèges, contournement de contrôle, persistance, collecte/extraction d'identifiants, mouvement latéral ou déni de service.
+- Commande système arbitraire, exécution automatique de fichiers/imports non fiables, ou action déclenchée par une sortie IA.
+- Exécution REA, installation d'outils, analyse sur cible réelle, déploiement ou code applicatif avant satisfaction des portes et autorisation distincte.
+- Transfert vers OpenRouter ou tout autre fournisseur IA avant décision explicite sur données, consentement, rétention et fournisseur.
 
-## 2. Rôles et responsabilités proposés
+## 2. Rôles et modèle d'approbation — approuvés
 
-Le contexte indique un usage initial personnel, mais aucune personne n'est nommée dans les documents comme propriétaire désigné. Les affectations ci-dessous sont donc des rôles à confirmer ; elles ne prétendent pas identifier une personne.
+Le modèle de responsabilités et de séparation ci-dessous est approuvé pour le pilote. L'approbation du modèle ne désigne pas encore tous les titulaires individuels.
 
-| Rôle | Responsabilité proposée pour le pilote | Affectation / décision |
+| Rôle | Responsabilité | Attribution pour le pilote |
 | --- | --- | --- |
-| Propriétaire de plateforme | Décisions globales, configuration des fournisseurs et suspension/révocation d'urgence | Une même personne peut cumuler ce rôle avec propriétaire de projet en pilote personnel ; identité à confirmer |
-| Propriétaire de projet | Périmètre, cibles autorisées, finalité, données, permissions et approbations du projet | À confirmer par le propriétaire du dépôt/projet |
-| Opérateur | Prépare ou demande une tâche dans le périmètre approuvé ; ne peut pas élargir son autorisation | Pour le pilote personnel, rôle susceptible d'être tenu par le propriétaire de projet ; à confirmer |
-| Approbateur | Vérifie séparément les demandes sensibles et les autorisations de cible | Pour les opérations impliquant une cible réelle, privilégier une personne distincte ; si cela n'est pas possible, garder ces opérations bloquées jusqu'à décision explicite |
-| Auditeur REA | Documente les constats et sources pour la révision épinglée | À désigner ; audit non effectué |
+| Propriétaire de plateforme | Décisions globales, fournisseurs et suspension/révocation d'urgence | Peut être cumulé avec le propriétaire de projet en pilote personnel ; titulaire à consigner |
+| Propriétaire de projet | Périmètre, cibles autorisées, finalité, données, permissions et approbations | Propriétaire du projet ; identité nominative à confirmer dans le registre des responsables |
+| Opérateur | Prépare ou demande des tâches dans le périmètre accordé ; ne peut pas étendre ses droits | Peut être le propriétaire du projet dans le pilote personnel ; titulaire à consigner |
+| Approbateur | Vérifie séparément les demandes sensibles et les autorisations de cible | Pour toute opération sur cible réelle, approbateur distinct privilégié ; sans séparation/approbation documentée, l'opération reste bloquée |
+| Auditeur REA | Consigne les observations et sources de la révision approuvée | À désigner ; audit non effectué |
 
-**Séparation minimale proposée :** une personne ne s'accorde pas silencieusement une autorisation. Toute opération sur une cible réelle nécessite une preuve d'autorisation enregistrée et une approbation séparée, ou reste interdite jusqu'à décision du propriétaire. La faisabilité d'une séparation des rôles en usage personnel reste à arbitrer.
+**Règle d'approbation :** aucun utilisateur ne s'accorde silencieusement une autorisation. Toute opération sur une cible réelle exige une preuve d'autorisation enregistrée et une approbation séparée, ou reste bloquée jusqu'à décision explicite. La faisabilité opérationnelle de cette séparation reste à préciser avant tout essai.
 
-## 3. Référence immuable REA proposée pour l'audit
+## 3. Référence REA à auditer — approuvée
 
 - Dépôt source : [`morluto/rea`](https://github.com/morluto/rea)
-- Branche observée : `main` (branche mutable ; citée uniquement pour le contexte)
-- Commit épinglé comme référence candidate : [`3345019fe1341db40c26af3463e136fcb7c7d11e`](https://github.com/morluto/rea/commit/3345019fe1341db40c26af3463e136fcb7c7d11e)
-- Date d'observation du commit : 2026-11-10 (métadonnées GitHub)
-- Statut : référence immuable candidate à auditer ; l'épinglage ne signifie pas que l'audit, la revue de licence ou la compatibilité ont été vérifiés.
-- Étape suivante : le propriétaire confirme que ce commit est la référence retenue ; l'auditeur renseigne les sources, limites et constats dans le plan/rapport d'audit avant toute conclusion sur REA.
+- Branche observée : `main` (mutable, contexte seulement)
+- Révision immuable approuvée : [`3345019fe1341db40c26af3463e136fcb7c7d11e`](https://github.com/morluto/rea/commit/3345019fe1341db40c26af3463e136fcb7c7d11e)
+- Date d'observation : 2026-11-10 (métadonnées GitHub)
+- Approbation : propriétaire du projet, 2026-11-10
+- Statut : référence d'audit approuvée ; audit, revue de licence et compatibilité restent non effectués/non vérifiés.
 
-Ne pas substituer ultérieurement le contenu courant de `main` à ce SHA. Toute autre révision exige une nouvelle référence et une comparaison/documentation distincte.
+Ne pas substituer le contenu courant de `main` à ce SHA. Toute autre révision exige une nouvelle décision et un rapport distinct ou une comparaison explicitement documentée.
 
-## 4. Décisions restant ouvertes et approbation
+## 4. Actions et validations encore ouvertes
 
-| Décision | Statut | Responsable |
+| Action / décision | Statut | Responsable |
 | --- | --- | --- |
-| Accepter le périmètre personnel, les opérations permises et les exclusions ci-dessus | À valider | Propriétaire du projet |
-| Confirmer les noms/personnes tenant les rôles et les règles de séparation | À valider | Propriétaire du projet |
-| Confirmer le commit REA épinglé comme référence d'audit | À valider | Propriétaire du projet |
-| Désigner l'auditeur et autoriser séparément l'examen documentaire de cette révision | Ouvert | Propriétaire du projet |
-| Autoriser toute opération ultérieure sur cible réelle | Non accordé | Porte et approbation distinctes requises |
+| Périmètre du pilote, opérations et exclusions | Approuvé le 2026-11-10 | Propriétaire du projet |
+| Modèle de rôles et d'approbation | Approuvé le 2026-11-10 | Propriétaire du projet |
+| SHA de REA à auditer | Approuvé le 2026-11-10 | Propriétaire du projet |
+| Consigner les titulaires nominatifs des rôles et désigner l'auditeur | À faire | Propriétaire du projet |
+| Effectuer l'audit documentaire sourcé du SHA approuvé | À faire ; non exécuté | Auditeur à désigner |
+| Autoriser toute opération ultérieure sur cible réelle | Non accordé ; décision séparée requise | Propriétaire du projet |
+| Approbation globale des conceptions fonctionnelle/sécurité et passage phase 4 | En attente | Propriétaire du projet |
 
-| Visa | État | Validateur / date |
-| --- | --- | --- |
-| Préparation de cette proposition documentaire | Consignée | Assistant / 2026-11-10 |
-| Approbation du périmètre et des rôles | En attente | Propriétaire du projet |
-| Confirmation de la référence REA | En attente | Propriétaire du projet |
+## 5. Conséquence sur les portes
 
-## 5. Conséquence sur les portes du projet
-
-La proposition de pilote et le commit épinglé ne clôturent pas l'audit REA ni la phase 3. La phase 1 reste incomplète jusqu'à production d'un audit sourcé ; les phases 2 et 3 restent à valider par le propriétaire ; la phase 4 n'est pas franchie. Aucun développement, test sur cible, exécution de REA ou déploiement n'est autorisé par cette décision documentaire.
+Cette approbation fixe le périmètre du pilote et la révision de référence, mais ne clôt pas l'audit REA ni la phase 3. La phase 1 reste incomplète jusqu'à production et revue d'un audit sourcé ; la phase 3 reste en cours pour les décisions sécurité/exploitation restantes ; la phase 4 n'est pas franchie. Aucun développement, test sur cible, exécution REA ou déploiement n'est autorisé par cette décision documentaire.
