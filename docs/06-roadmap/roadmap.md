@@ -28,19 +28,21 @@ Travaux en cours :
 
 Références : [charte](../00-project-charter.md), [index documentaire](../README.md), [traçabilité et validation](../03-governance/traceability-and-validation.md).
 
-## Phase 3 — Conception sécurité et exploitation — à faire
+## Phase 3 — Conception sécurité et exploitation — conception initiale rédigée, non validée
 
-Compléter le modèle de menace, transport/enrôlement/révocation d'agent, isolation, secrets, stockage, sauvegarde, rétention, observabilité, réponse aux incidents, exploitation, licences, coûts et plan de vérification. Voir l'[agenda de conception phase 3](../03-governance/phase-3-design-agenda.md).
+Une proposition de conception couvre l'identité et le cycle de vie des agents, le transport et l'isolation, les secrets, le cycle de vie des données, la gouvernance IA, les journaux, les incidents, l'exploitation et les vérifications futures. Voir la [conception sécurité/exploitation](../03-governance/security-operations-design.md) et l'[agenda phase 3](../03-governance/phase-3-design-agenda.md).
 
-**Sortie :** conception sécurité/exploitation revue, risques résiduels visibles et validation utilisateur.
+Les décisions restent ouvertes ; une liste rédigée ne vaut ni décision acceptée ni conception validée.
 
-## Phase 4 — Revue et porte avant réalisation
+**Sortie :** décisions et propriétaires explicités, risques résiduels traités ou acceptés formellement, conception revue et validation utilisateur.
 
-Clôturer l'audit et la conception, vérifier coûts/licences/périmètre pilote, préciser les critères de recette et obtenir la demande explicite de démarrer le développement. La validation des phases précédentes ne vaut pas à elle seule demande de réalisation.
+## Phase 4 — Revue et porte avant réalisation — non franchie
 
-## Phase 5+ — Réalisation — non autorisée à ce stade
+Clôturer l'audit et la conception, vérifier coûts/licences/périmètre pilote, préciser les critères de recette et obtenir la demande explicite de démarrer le développement. La demande de codage ne remplace pas l'audit ni la validation de conception.
 
-Prototype contrôlé, agent, backend, interface, tests et déploiement ne sont planifiés qu'après la phase 4 et son autorisation explicite. Aucun code applicatif ou test sur cible réelle dans la phase actuelle.
+## Phase 5+ — Réalisation — bloquée
+
+Prototype contrôlé, agent, backend, interface, tests et déploiement ne sont planifiés qu'après la phase 4 et son autorisation explicite. Aucun code applicatif ou test sur cible réelle avant la satisfaction de ces conditions.
 
 ## Critères transversaux
 

@@ -14,8 +14,9 @@
 
 - Phase active : **phase 2 — spécifications fonctionnelles et conception logique**.
 - Phase 1 — audit technique REA : **incomplète** ; aucune révision de référence ni rapport d'audit n'est consigné.
-- Phase 3 — sécurité et exploitation : **à détailler** ; l'agenda documentaire est ouvert.
-- Code applicatif, installation d'outils, exécution de REA, analyse d'une cible réelle et déploiement : **non autorisés dans la phase actuelle et non effectués**.
+- Phase 3 — sécurité et exploitation : **conception initiale documentée, mais revue et validation ouvertes**.
+- Phase 4 — porte avant réalisation : **non franchie**.
+- Code applicatif, installation d'outils, exécution de REA, analyse d'une cible réelle et déploiement : **non effectués**. Ils ne commencent pas tant que les portes du dépôt ne sont pas satisfaites.
 - Les commandes, capacités, formats, transports, sessions, preuves et prérequis REA issus de notes antérieures restent des **hypothèses** jusqu'à audit d'une révision précise.
 - Les documents préparés sont des propositions de conception ; ils ne valent pas validation utilisateur ni clôture de phase.
 
@@ -37,11 +38,11 @@ Les technologies de stockage, file, identité, transport et hébergement demeure
 | 0 | Cadrage initial et dépôt documentaire | Terminé au niveau initial |
 | 1 | Audit reproductible d'une révision précise de REA | Incomplet / dépendance ouverte |
 | 2 | Spécifications fonctionnelles et conception logique | Active ; documents enrichis, validation utilisateur attendue |
-| 3 | Conception détaillée sécurité, agent et exploitation | À faire ; agenda établi |
+| 3 | Conception détaillée sécurité, agent et exploitation | Conception préliminaire documentée ; validation et décisions ouvertes |
 | 4 | Revue de conception et décision de démarrer la réalisation | Bloquée jusqu'à clôture des prérequis et validation explicite |
-| 5+ | Développement, tests et déploiement | Pas commencé / non autorisé |
+| 5+ | Développement, tests et déploiement | Pas commencé / bloqué par les portes du projet |
 
-Le travail de phase 2 peut avancer sans figer les détails dépendant de REA. Les critères de passage applicables sont dans [`docs/06-roadmap/roadmap.md`](docs/06-roadmap/roadmap.md).
+Les critères de passage applicables sont dans [`docs/06-roadmap/roadmap.md`](docs/06-roadmap/roadmap.md). La demande de démarrage du codage ne clôt pas, à elle seule, l'audit REA ni les validations fonctionnelles et sécurité exigées par les règles du dépôt.
 
 ## Questions prioritaires ouvertes
 
@@ -55,10 +56,10 @@ Le travail de phase 2 peut avancer sans figer les détails dépendant de REA. Le
 
 ## Prochaine action
 
-Faire relire et valider le cadrage et les questions de phase 2 ; puis choisir une révision de référence et compléter l'audit documentaire REA, sans modifier son dépôt. Poursuivre la conception sécurité/exploitation en phase 3. Aucune réalisation avant clôture de l'audit, validation fonctionnelle et sécurité, revue des licences/coûts/périmètre et demande explicite de démarrage.
+Faire valider les arbitrages ouverts de phases 2 et 3 ; choisir une révision immuable de REA et documenter l'audit avec sources datées ; mettre à jour risques et critères ; tenir une revue de conception. La réalisation demeure bloquée jusqu'à satisfaction de la porte de phase 4 et des règles `AGENTS.md`.
 
 ## Journal de continuité
 
 - Le dépôt contient une première spécification fonctionnelle, une architecture logique, une analyse de menace initiale, un modèle conceptuel, des contrats API proposés, une roadmap et des ADR.
-- Cette tâche ajoute une charte, un index documentaire, un plan d'audit REA, un registre initial des risques, une gouvernance des données/IA, un cadre de traçabilité/validation et un agenda de phase 3.
-- Aucun audit technique de REA, test, installation, exécution sur cible ou développement n'a été effectué par ce travail.
+- La documentation comprend également une charte, un index documentaire, un plan d'audit REA, un registre initial des risques, une gouvernance des données/IA, un cadre de traçabilité/validation, un agenda phase 3 et une conception sécurité/exploitation préliminaire.
+- Cette tâche n'a exécuté aucun audit technique de REA, test, installation, analyse sur cible, développement ou déploiement.
