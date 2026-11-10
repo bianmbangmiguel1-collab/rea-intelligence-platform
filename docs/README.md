@@ -24,6 +24,7 @@ Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et les règles de conti
 | Sécurité/exploitation détaillées | [Conception phase 3](03-governance/security-operations-design.md) | Proposition, décisions à valider |
 | Revue sécurité | [Revue documentaire sécurité](03-governance/security-design-review.md) | Couverture revue ; aucun contrôle technique testé |
 | Revue des portes | [Revue de phase](03-governance/phase-review.md) | Phase 4 non franchie |
+| Arborescence cible | [Structure proposée](08-project-structure/README.md) | Documentation uniquement ; aucun squelette applicatif créé |
 | Données et IA | [Gouvernance des données et de l'IA](03-governance/data-ai-governance.md) | Politique proposée, décisions ouvertes |
 | Risques | [Registre des risques](03-governance/risk-register.md) | Initial, sans cotation validée |
 | Audit du moteur | [Plan d'audit REA](03-governance/rea-audit-plan.md) | Protocole ; audit non exécuté |
