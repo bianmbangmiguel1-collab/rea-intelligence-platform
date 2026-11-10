@@ -14,35 +14,29 @@ Vérifier sur une révision déterminée du dépôt officiel les interfaces rée
 
 Voir le [plan d'audit documentaire](../03-governance/rea-audit-plan.md). L'audit n'est pas marqué terminé.
 
-## Phase 2 — Spécifications fonctionnelles et conception logique — active
+## Phase 2 — Spécifications fonctionnelles et conception logique — revue documentaire effectuée, validation propriétaire en attente
 
-Travaux en cours :
+Les exigences et parcours, l'architecture logique, le modèle conceptuel, les contrats API proposés, la gouvernance données/IA et les risques ont fait l'objet d'une revue de cohérence documentaire. Voir la [revue fonctionnelle](../03-governance/functional-design-review.md) et la [revue des portes](../03-governance/phase-review.md).
 
-- exigences, parcours utilisateur, périmètre et exclusions ;
-- composants et frontières de confiance ;
-- modèle de données conceptuel et contrats de plateforme proposés ;
-- exigences de sécurité, gouvernance des données/IA et registre des risques ;
-- traçabilité, critères d'acceptation et questions ouvertes.
+**Résultat de revue :** base conceptuelle cohérente sous réserves, mais pilote, priorités, approbations, seuils non fonctionnels et dépendances REA restent à arbitrer. Aucun test/recette n'a été effectué. La phase n'est pas déclarée validée ou terminée.
 
-**Sortie :** documents cohérents, statuts et risques explicites, questions de décision identifiées et validation de l'utilisateur. Les détails d'intégration REA restent conditionnels à la phase 1.
+**Sortie requise :** décisions consignées, critères d'acceptation par exigence, dépendances REA sourcées ou explicitement ouvertes et validation du propriétaire.
 
-Références : [charte](../00-project-charter.md), [index documentaire](../README.md), [traçabilité et validation](../03-governance/traceability-and-validation.md).
+## Phase 3 — Conception sécurité et exploitation — revue documentaire effectuée, validation propriétaire en attente
 
-## Phase 3 — Conception sécurité et exploitation — conception initiale rédigée, non validée
+Une proposition couvre l'identité et le cycle de vie des agents, le transport et l'isolation, les secrets, le cycle de vie des données, la gouvernance IA, les journaux, les incidents, l'exploitation et les vérifications futures. Voir la [conception sécurité/exploitation](../03-governance/security-operations-design.md), l'[agenda phase 3](../03-governance/phase-3-design-agenda.md) et la [revue de sécurité](../03-governance/security-design-review.md).
 
-Une proposition de conception couvre l'identité et le cycle de vie des agents, le transport et l'isolation, les secrets, le cycle de vie des données, la gouvernance IA, les journaux, les incidents, l'exploitation et les vérifications futures. Voir la [conception sécurité/exploitation](../03-governance/security-operations-design.md) et l'[agenda phase 3](../03-governance/phase-3-design-agenda.md).
+**Résultat de revue :** principaux domaines de risque représentés au niveau conceptuel ; mécanismes, paramètres, responsables et preuve d'efficacité restent ouverts. Aucun contrôle technique n'a été exécuté. La sécurité n'est pas déclarée validée.
 
-Les décisions restent ouvertes ; une liste rédigée ne vaut ni décision acceptée ni conception validée.
-
-**Sortie :** décisions et propriétaires explicités, risques résiduels traités ou acceptés formellement, conception revue et validation utilisateur.
+**Sortie requise :** arbitrer les décisions, attribuer propriétaires et traitements aux risques, définir des vérifications mesurables et obtenir la validation explicite du propriétaire.
 
 ## Phase 4 — Revue et porte avant réalisation — non franchie
 
-Clôturer l'audit et la conception, vérifier coûts/licences/périmètre pilote, préciser les critères de recette et obtenir la demande explicite de démarrer le développement. La demande de codage ne remplace pas l'audit ni la validation de conception.
+Clôturer l'audit et les conceptions, vérifier coûts/licences/périmètre pilote, définir les critères de recette, obtenir les approbations fonctionnelle et sécurité du propriétaire et une demande explicite de démarrer le développement. La demande de codage ne remplace pas ces prérequis.
 
 ## Phase 5+ — Réalisation — bloquée
 
-Prototype contrôlé, agent, backend, interface, tests et déploiement ne sont planifiés qu'après la phase 4 et son autorisation explicite. Aucun code applicatif ou test sur cible réelle avant la satisfaction de ces conditions.
+Prototype contrôlé, agent, backend, interface, tests et déploiement ne sont possibles qu'après la phase 4 et son autorisation explicite. Aucun code applicatif ou test sur cible réelle avant satisfaction des conditions.
 
 ## Critères transversaux
 

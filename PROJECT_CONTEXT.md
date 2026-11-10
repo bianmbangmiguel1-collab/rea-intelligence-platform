@@ -8,17 +8,17 @@
 - Dépôt : `bianmbangmiguel1-collab/rea-intelligence-platform`
 - Moteur prévu : `morluto/rea`, dépendance externe indépendante, non modifiée par ce projet
 - Langue de travail : français
-- Objectif : concevoir une plateforme indépendante autour de REA ; commencer dès maintenant par la documentation et les décisions, pas par l'implémentation.
+- Objectif : concevoir une plateforme indépendante autour de REA ; poursuivre la documentation et les revues de conception avant toute implémentation.
 
 ## Statut actuel
 
-- Phase active : **phase 2 — spécifications fonctionnelles et conception logique**.
+- Phase active : **phase 2 — spécifications fonctionnelles et conception logique ; revue documentaire préparatoire effectuée**.
 - Phase 1 — audit technique REA : **incomplète** ; aucune révision de référence ni rapport d'audit n'est consigné.
-- Phase 3 — sécurité et exploitation : **conception initiale documentée, mais revue et validation ouvertes**.
+- Phase 3 — sécurité et exploitation : **conception et revue documentaire préliminaires effectuées ; décisions et validation du propriétaire ouvertes**.
 - Phase 4 — porte avant réalisation : **non franchie**.
 - Code applicatif, installation d'outils, exécution de REA, analyse d'une cible réelle et déploiement : **non effectués**. Ils ne commencent pas tant que les portes du dépôt ne sont pas satisfaites.
 - Les commandes, capacités, formats, transports, sessions, preuves et prérequis REA issus de notes antérieures restent des **hypothèses** jusqu'à audit d'une révision précise.
-- Les documents préparés sont des propositions de conception ; ils ne valent pas validation utilisateur ni clôture de phase.
+- Les avis des revues sont documentaires ; ils ne valent pas approbation du propriétaire, audit technique, recette ni preuve de sécurité.
 
 ## Cadrage en cours — à confirmer
 
@@ -37,29 +37,32 @@ Les technologies de stockage, file, identité, transport et hébergement demeure
 | --- | --- | --- |
 | 0 | Cadrage initial et dépôt documentaire | Terminé au niveau initial |
 | 1 | Audit reproductible d'une révision précise de REA | Incomplet / dépendance ouverte |
-| 2 | Spécifications fonctionnelles et conception logique | Active ; documents enrichis, validation utilisateur attendue |
-| 3 | Conception détaillée sécurité, agent et exploitation | Conception préliminaire documentée ; validation et décisions ouvertes |
-| 4 | Revue de conception et décision de démarrer la réalisation | Bloquée jusqu'à clôture des prérequis et validation explicite |
+| 2 | Spécifications fonctionnelles et conception logique | Revue documentaire effectuée ; validation du propriétaire et arbitrages en attente |
+| 3 | Conception détaillée sécurité, agent et exploitation | Conception/revue préliminaires effectuées ; décisions et validation ouvertes |
+| 4 | Revue de conception et décision de démarrer la réalisation | Bloquée ; prérequis non clos et validation explicite absente |
 | 5+ | Développement, tests et déploiement | Pas commencé / bloqué par les portes du projet |
 
-Les critères de passage applicables sont dans [`docs/06-roadmap/roadmap.md`](docs/06-roadmap/roadmap.md). La demande de démarrage du codage ne clôt pas, à elle seule, l'audit REA ni les validations fonctionnelles et sécurité exigées par les règles du dépôt.
+Les critères applicables sont dans [`docs/06-roadmap/roadmap.md`](docs/06-roadmap/roadmap.md). Les avis de revue sont consignés dans [`docs/03-governance/phase-review.md`](docs/03-governance/phase-review.md). La demande de démarrage du codage ne clôt pas l'audit REA ni les validations fonctionnelles et sécurité exigées par les règles du dépôt.
 
 ## Questions prioritaires ouvertes
 
-- Quelle révision immuable de `morluto/rea` sera auditée, et avec quelles autorisations pour toute étape ultérieure ?
+- Quel pilote minimal, profils d'utilisateurs, cas d'usage, cibles et opérations autorisées/interdites ?
+- Quelle révision immuable de `morluto/rea` sera auditée, et quelles étapes nécessitent une autorisation séparée ?
 - Quels outils/interfaces, transports, schémas, capacités, états, sessions, preuves et erreurs sont réellement documentés dans cette révision ?
 - Quelles capacités et conditions sont compatibles avec Windows et Linux ?
 - Quel fournisseur d'identité, hébergement, région, base, file et stockage seront retenus ?
-- Quel modèle d'enrôlement, de transport, de mise à jour et de révocation agent est acceptable ?
+- Quel modèle d'enrôlement, de transport, d'isolation, de mise à jour et de révocation agent est acceptable ?
 - Quelles données pourront être transmises à un fournisseur IA, avec quel consentement, quelle rétention et quelles conditions ?
-- Quel périmètre de pilote, budget, politique d'autorisation et durée de conservation sont souhaités ?
+- Quels seuils de performance, disponibilité, budget, support et durée de conservation sont souhaités ?
+- Quels risques résiduels peuvent être acceptés, par qui et avec quelle justification ?
 
 ## Prochaine action
 
-Faire valider les arbitrages ouverts de phases 2 et 3 ; choisir une révision immuable de REA et documenter l'audit avec sources datées ; mettre à jour risques et critères ; tenir une revue de conception. La réalisation demeure bloquée jusqu'à satisfaction de la porte de phase 4 et des règles `AGENTS.md`.
+Le propriétaire examine les [revues fonctionnelle, sécurité et de phase](docs/03-governance/phase-review.md) et consigne ses décisions. Ensuite, choisir une révision immuable de REA et produire un audit sourcé ; préciser les décisions de phase 3 et les critères de vérification. La réalisation demeure bloquée jusqu'à satisfaction de la porte de phase 4 et des règles `AGENTS.md`.
 
 ## Journal de continuité
 
 - Le dépôt contient une première spécification fonctionnelle, une architecture logique, une analyse de menace initiale, un modèle conceptuel, des contrats API proposés, une roadmap et des ADR.
-- La documentation comprend également une charte, un index documentaire, un plan d'audit REA, un registre initial des risques, une gouvernance des données/IA, un cadre de traçabilité/validation, un agenda phase 3 et une conception sécurité/exploitation préliminaire.
-- Cette tâche n'a exécuté aucun audit technique de REA, test, installation, analyse sur cible, développement ou déploiement.
+- La documentation comprend une charte, un index documentaire, un plan d'audit REA, un registre initial des risques, une gouvernance données/IA, un cadre de traçabilité/validation, un agenda et une conception sécurité/exploitation préliminaire.
+- Cette tâche ajoute les revues documentaires fonctionnelle et sécurité ainsi qu'un relevé explicite de l'état des portes.
+- Aucun audit technique de REA, test, installation, analyse sur cible, développement ou déploiement n'a été effectué.

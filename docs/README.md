@@ -4,11 +4,11 @@ Point d'entrée documentaire de REA Intelligence Platform. Tous les documents de
 
 ## État et statut des informations
 
-- **Phase active :** phase 2, spécifications fonctionnelles et conception logique.
+- **Phase active :** phase 2, spécifications fonctionnelles et conception logique, revue documentaire effectuée.
 - **Phase 1 — audit REA :** incomplète ; aucune révision auditée n'est enregistrée ici.
-- **Phase 3 — sécurité/exploitation :** conception initiale rédigée ; décisions, revue et validation utilisateur restent à obtenir.
-- **Réalisation :** bloquée par les portes de l'audit REA et de validation de conception ; aucun code applicatif ni déploiement n'est entrepris.
-- **Validation :** les documents ci-dessous ne valent pas validation utilisateur ni clôture d'une phase.
+- **Phase 3 — sécurité/exploitation :** conception initiale et revue documentaire effectuées ; validation du propriétaire et décisions ouvertes.
+- **Réalisation :** bloquée ; phase 4 non franchie.
+- **Aucune implémentation, recette, installation d'outils ou exécution REA** n'est affirmée par ces documents.
 
 Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et les règles de continuité [`AGENTS.md`](../AGENTS.md).
 
@@ -17,10 +17,13 @@ Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et les règles de conti
 | Sujet | Document | Statut |
 | --- | --- | --- |
 | Vision, périmètre et limites | [Charte du projet](00-project-charter.md) | Proposition de cadrage |
-| Exigences et parcours produit | [Spécification fonctionnelle](01-specifications/functional-specification.md) | Proposition à valider |
+| Exigences et parcours produit | [Spécification fonctionnelle](01-specifications/functional-specification.md) | Revue de conception ; approbation propriétaire en attente |
+| Revue fonctionnelle | [Revue documentaire fonctionnelle](03-governance/functional-design-review.md) | Avis favorable sous réserves ; pas une recette |
 | Architecture logique | [Architecture détaillée](02-architecture/detailed-architecture.md) | Proposition ; intégration REA conditionnelle |
 | Sécurité | [Conception sécurité](02-architecture/security-design.md) | Analyse initiale, à compléter et valider |
 | Sécurité/exploitation détaillées | [Conception phase 3](03-governance/security-operations-design.md) | Proposition, décisions à valider |
+| Revue sécurité | [Revue documentaire sécurité](03-governance/security-design-review.md) | Couverture revue ; aucun contrôle technique testé |
+| Revue des portes | [Revue de phase](03-governance/phase-review.md) | Phase 4 non franchie |
 | Données et IA | [Gouvernance des données et de l'IA](03-governance/data-ai-governance.md) | Politique proposée, décisions ouvertes |
 | Risques | [Registre des risques](03-governance/risk-register.md) | Initial, sans cotation validée |
 | Audit du moteur | [Plan d'audit REA](03-governance/rea-audit-plan.md) | Protocole ; audit non exécuté |
@@ -37,12 +40,12 @@ Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et les règles de conti
 1. **Exigence** : besoin que la plateforme devra satisfaire, sous réserve de validation du périmètre.
 2. **Choix accepté** : décision explicitement approuvée par le propriétaire du projet ; une orientation documentaire ne suffit pas à l'établir.
 3. **Proposition** : option de conception à discuter, non engageante.
-4. **Fait vérifié** : affirmation étayée par une source et une révision identifiées. Aucun contrat REA n'est encore classé ainsi.
+4. **Fait vérifié** : preuve étayée par source et révision identifiées. Aucun contrat REA n'est encore classé ainsi.
 5. **Hypothèse** : élément non confirmé ; elle ne doit pas servir de garantie ou de contrat.
 
 ## Prochaine séquence
 
-1. Faire valider le périmètre et les arbitrages ouverts de phases 2 et 3.
+1. Le propriétaire répond aux points d'arbitrage dans la [revue de phase](03-governance/phase-review.md).
 2. Choisir une révision immuable de REA et compléter l'audit avec des sources datées ; distinguer examen documentaire et tests exécutés.
-3. Mettre à jour les risques et les critères de recette à partir des décisions.
-4. Effectuer une revue de conception et demander une décision explicite avant toute éventuelle réalisation.
+3. Traiter les risques, confirmer les décisions sécurité/exploitation et définir les critères de vérification.
+4. Effectuer une revue de conception finale et demander une décision explicite avant toute éventuelle réalisation.
