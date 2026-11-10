@@ -1,95 +1,48 @@
 # Feuille de route
 
-## Phase 0 — Cadrage et documentation
+Les phases décrivent les portes de décision du projet. La progression documentaire ne signifie pas que les audits ou tests ont été exécutés. Aucun passage à la réalisation sans validation explicite.
 
-Objectif : clarifier le périmètre, la vision et les principes du projet.
+## Phase 0 — Cadrage initiale — terminée
 
-Livrables :
-- vision du produit
-- décision d'intégration REA
-- règle de non-réécriture du moteur
-- hiérarchie de responsabilités
+Vision, objectif d'intégrer REA, règles de non-réécriture et dépôt documentaire initial.
 
-Statut : terminé au niveau de la conception initiale.
+## Phase 1 — Audit de REA — incomplète / dépendance ouverte
 
-## Phase 1 — Audit REA et validation des interfaces
+Vérifier sur une révision identifiée du dépôt officiel : interface CLI/MCP, transports, schémas, providers/capacités, sessions, preuves, erreurs, annulation, dépendances, licences et compatibilité OS.
 
-Objectif : vérifier les interfaces officielles du moteur et les capacités réellement disponibles.
+**Sortie :** rapport sourcé, révision auditée, matrice des capacités et questions restantes. Les éléments du document d'architecture actuellement décrits comme commandes REA restent des hypothèses tant que non vérifiés.
 
-À valider :
-- CLI REA
-- MCP REA
-- providers
-- capabilities
-- sessions
-- evidence
-- dépendances et prérequis
-- conditions système et de sécurité
+## Phase 2 — Spécifications fonctionnelles et conception logique — active
 
-Livrable : dossier d'intégration et matrice de compatibilité.
+Travaux en cours :
 
-## Phase 2 — Spécification fonctionnelle et technique
+- exigences et parcours utilisateur ;
+- composants et frontières de confiance ;
+- modèle de données conceptuel ;
+- propositions de contrats API de la plateforme ;
+- premiers contrôles de sécurité et critères d'acceptation.
 
-Objectif : formaliser les services, modules, workflows et contrats.
+**Sortie :** documents cohérents, risques et questions ouverts visibles ; validation de l'utilisateur. Les détails d'intégration REA sont conditionnels à la phase 1.
 
-Contenu :
-- architecture détaillée
-- flux d'analyse
-- modèle de données
-- contrats internes
-- sécurité et permissions
-- exigences de qualité
+## Phase 3 — Conception sécurité et exploitation — à faire
 
-## Phase 3 — Agent local et runners
+Compléter le modèle de menace, transport/enrôlement/révocation agent, isolation, secrets, stockage, sauvegarde, rétention, observabilité, réponse aux incidents et plan de tests.
 
-Objectif : sécuriser l'exécution des analyses sur les machines autorisées.
+**Sortie :** conception sécurité/exploitation révisée et validée.
 
-Contenu :
-- enrôlement agent
-- authentification sortante
-- déclaration de capacités
-- distribution de jobs
-- remontée de preuves
-- journaux et diagnostics
+## Phase 4 — Revue et porte avant réalisation
 
-## Phase 4 — IA et production de rapports
+Clôturer l'audit et la conception, vérifier coût/licences/périmètre pilote, préciser les critères de recette et obtenir la demande explicite de démarrer le développement.
 
-Objectif : fiabiliser l'assistance IA sans la confondre avec la logique technique.
+## Phase 5+ — Réalisation — non autorisée à ce stade
 
-Contenu :
-- OpenRouter ou autre fournisseur
-- routeur IA
-- fallback
-- minimisation de contexte
-- synthèse de rapports
-- traçabilité des modèles
+Prototype contrôlé, agent, backend, interface, tests et déploiement seront planifiés après la phase 4. Ne pas commencer avant.
 
-## Phase 5 — Interface produit et validation
+## Critères transversaux
 
-Objectif : livrer une plateforme exploitable de bout en bout.
-
-Contenu :
-- frontend
-- dashboard et workspaces
-- visualisation des preuves
-- rapports techniques
-- tests fonctionnels et de sécurité
-
-## Phase 6 — Déploiement et exploitation
-
-Objectif : passer en environnement pilote puis production maîtrisée.
-
-Contenu :
-- déploiement hybride ou serveur
-- sécurité de production
-- reprise après panne
-- observabilité
-- politique de mise à jour REA
-
-## Critères de passage entre phases
-
-Une phase n'est validée que si :
-- le livrable associé est documenté ;
-- les dépendances et risques sont listés ;
-- les critères d'acceptation sont clairs ;
-- le passage à la phase suivante est explicite.
+- faits REA cités avec révision/source ;
+- décisions distinguées des propositions ;
+- permissions et autorisations représentées dans les flux ;
+- erreurs, limites et résultats partiels conservés ;
+- données externes/IA maîtrisées ;
+- livrable de la phase relu et passage explicite.
