@@ -22,17 +22,19 @@ Les exigences et parcours, l'architecture logique, le modèle conceptuel, les co
 
 **Sortie requise :** décisions consignées, critères d'acceptation par exigence, dépendances REA sourcées ou explicitement ouvertes et validation du propriétaire. Cette étape est désormais satisfaite pour la phase 2.
 
-## Phase 3 — Conception sécurité et exploitation — en cours / validation propriétaire à poursuivre
+## Phase 3 — Conception sécurité et exploitation — validée au niveau documentaire
 
 Une proposition couvre l'identité et le cycle de vie des agents, le transport et l'isolation, les secrets, le cycle de vie des données, la gouvernance IA, les journaux, les incidents, l'exploitation et les responsabilités.
 
-**Résultat de revue :** principaux domaines de risque représentés au niveau conceptuel ; mécanismes, paramètres, responsables et preuve d'efficacité restent ouverts. Aucun contrôle technique n'a été exécuté.
+**Résultat de revue :** principaux domaines de risque représentés au niveau conceptuel ; mécanismes, paramètres, responsables et preuve d'efficacité ont été traités dans le cadre de la conception documentaire, et la validation du propriétaire est enregistrée au niveau des documents de phase 3.
 
-**Sortie requise :** arbitrer les décisions, attribuer propriétaires et traitements aux risques, définir des vérifications mesurables et obtenir la validation explicite du propriétaire.
+**Sortie requise :** décisions attribuées, risques identifiés, vérifications mesurables définies et validation explicite du propriétaire. Cette étape est désormais satisfaite pour la phase 3.
 
-## Phase 4 — Revue et porte avant réalisation — non franchie
+## Phase 4 — Revue et porte avant réalisation — active
 
-Clôturer l'audit et les conceptions, vérifier coûts/licences/périmètre pilote, définir les critères de recette, obtenir les approbations fonctionnelle et sécurité du propriétaire et une autorisation explicite avant réalisation.
+Clôturer l'audit REA, vérifier les coûts/licences/périmètre pilote, définir les critères de recette de conception, obtenir les approbations fonctionnelle et sécurité du propriétaire et une autorisation explicite avant toute mise en œuvre.
+
+**Révision à clôturer :** choisir une référence immuable de `morluto/rea`, compléter l'audit sourcé et confirmer les dépendances restantes. Sans cette clôture, la phase 4 ne peut être franchie.
 
 ## Phase 5+ — Réalisation — bloquée
 
