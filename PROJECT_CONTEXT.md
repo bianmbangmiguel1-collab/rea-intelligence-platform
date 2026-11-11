@@ -10,18 +10,17 @@
 - Révision REA de référence : `morluto/rea@0909d89c966c30955fd0906b622ff25f3700789f`
 - Source de référence : `https://github.com/morluto/rea/commit/0909d89c966c30955fd0906b622ff25f3700789f`
 - Langue de travail : français
-- Objectif : concevoir une plateforme indépendante autour de REA ; poursuivre la documentation, la validation documentaire et la mise en œuvre conforme à la révision référencée.
+- Objectif : concevoir et mettre en œuvre une plateforme indépendante autour de REA, dans le périmètre documenté et avec validation de sécurité et de recette.
 
 ## Statut actuel
 
-- Phase active : **phase 5 — réalisation contrôlée et validée à la suite de la phase 4**.
+- Phase active : **phase 5 — plan de mise en œuvre finalisé ; exécution réelle soumise aux validations de recette**.
 - Phase 1 — audit technique REA : **terminé au niveau documentaire** ; la révision de référence est épinglée et documentée.
 - Phase 2 — spécifications fonctionnelles et conception logique : **validée**.
 - Phase 3 — sécurité et exploitation : **validée**.
 - Phase 4 — porte avant réalisation : **validée** ; la revue finale est clôturée et l'autorisation de mise en œuvre est enregistrée.
-- Code applicatif, installation d'outils, exécution de REA, analyse d'une cible réelle et déploiement : **autorisé dans le périmètre documenté de la phase 5**.
-- Les commandes, capacités, formats, transports, sessions, preuves et prérequis REA issus de notes antérieures sont désormais **traités comme hypothèses documentées** jusqu'à confirmation dans la révision auditée.
-- Les avis des revues sont documentaires ; ils ne valent pas approbation du propriétaire, audit technique, recette ni preuve de sécurité, sauf mention explicite de clôture de phase et de validation du propriétaire.
+- Phase 5 — réalisation contrôlée : **plan finalisé**, mais **aucune implémentation applicative ni exécution REA n'est déclarée validée** sans preuve de recette.
+- Les commandes, capacités, formats, transports, sessions, preuves et prérequis REA issus de notes antérieures restent des **hypothèses documentées** tant qu'ils ne sont pas vérifiés dans la révision auditée.
 
 ## Cadrage en cours
 
@@ -32,39 +31,23 @@
 5. OpenRouter envisagé, sans décision technique ni autorisation de transfert de données ; mode sans IA requis dans la conception.
 6. Orientations d'architecture enregistrées dans les ADR à confirmer selon leur statut et l'approbation explicite.
 
-Les technologies de stockage, file, identité, transport et hébergement demeurent proposées jusqu'à décision et vérification, mais la phase 5 peut avancer dans le périmètre documenté avec la révision auditée.
-
 ## Phases et portes
 
 | Phase | Objet | État |
 | --- | --- | --- |
 | 0 | Cadrage initial et dépôt documentaire | Terminé au niveau initial |
-| 1 | Audit reproductible d'une révision précise de REA | Terminé au niveau documentaire pour la révision `0909d89c966c30955fd0906b622ff25f3700789f` |
+| 1 | Audit reproductible d'une révision précise de REA | Terminé au niveau documentaire |
 | 2 | Spécifications fonctionnelles et conception logique | Validée par le propriétaire |
 | 3 | Conception détaillée sécurité, agent et exploitation | Validée à ce niveau documentaire |
-| 4 | Revue de conception et décision de démarrer la réalisation | Validée ; autorisation de phase 5 enregistrée |
-| 5+ | Développement, tests et déploiement | Active ; sous périmètre documenté et contrôlé |
-
-Les critères applicables sont dans [`docs/06-roadmap/roadmap.md`](docs/06-roadmap/roadmap.md). Les avis de revue sont consignés dans [`docs/03-governance/phase-review.md`](docs/03-governance/phase-review.md).
-
-## Questions prioritaires ouvertes
-
-- Quels outils/interfaces, transports, schémas, capacités, états, sessions, preuves et erreurs sont réellement documentés dans la révision de référence ?
-- Quelles capacités et conditions sont compatibles avec Windows et Linux ?
-- Quel fournisseur d'identité, hébergement, région, base, file et stockage seront retenus ?
-- Quel modèle d'enrôlement, de transport, d'isolation, de mise à jour et de révocation agent est acceptable ?
-- Quelles données pourront être transmises à un fournisseur IA, avec quel consentement, quelle rétention et quelles conditions ?
-- Quels seuils de performance, disponibilité, budget, support et durée de conservation sont souhaités ?
-- Quels risques résiduels peuvent être acceptés, par qui et avec quelle justification ?
-- Quelles vérifications de conception seront exécutées dans la phase 5 avec leur responsable et leur preuve ?
+| 4 | Revue de conception et décision de démarrer la réalisation | Validée ; autorisation enregistrée |
+| 5 | Réalisation contrôlée | Plan finalisé ; mise en œuvre soumise à validation de recette |
 
 ## Prochaine action
 
-La phase 5 démarre sous le périmètre architectural et de sécurité validé. La réalisation doit rester conforme à la révision REA de référence et aux contrôles de phase 4, avec traçabilité et preuve de validation par conception.
+La phase 5 passe au niveau de mise en œuvre réelle uniquement après validation explicite du périmètre fonctionnel et de sécurité, le plan documentaire étant désormais fermé. Les changements appliqués doivent rester alignés sur la révision REA de référence et sur les critères de recette définis dans le projet.
 
 ## Journal de continuité
 
-- Le dépôt contient une première spécification fonctionnelle, une architecture logique, une analyse de menace initiale, un modèle conceptuel, des contrats API proposés, une roadmap et des ADR de cadrage.
-- La documentation comprend une charte, un index documentaire, un plan d'audit REA, un registre initial des risques, une gouvernance données/IA, un cadre de traçabilité/validation, un agenda, les revues documentaires de sécurité et la feuille de route des phases.
-- Les phases 2, 3 et 4 ont été validées au niveau documentaire ; la phase 5 est ouverte sous périmètre contrôlé.
-- L'audit REA de référence est désormais épinglé sur la révision officielle `morluto/rea@0909d89c966c30955fd0906b622ff25f3700789f`.
+- Les phases 2, 3 et 4 sont documentées et validées selon le cadre du dépôt.
+- La révision REA de référence est épinglée et utilisée comme base de conception.
+- Le plan de mise en œuvre de la phase 5 est finalisé, mais aucune exécution sur cible réelle n'est validée sans preuve de recette.

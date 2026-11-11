@@ -21,26 +21,27 @@ Les exigences et parcours, l'architecture logique, le modèle conceptuel, les co
 
 **Résultat de revue :** base conceptuelle cohérente et validée comme point de départ. Les arbitrages de pilote, approbations, seuils non fonctionnels et dépendances REA restent à maîtriser selon les décisions de phase 3 et l'audit REA.
 
-**Sortie requise :** décisions consignées, critères d'acceptation par exigence, dépendances REA sourcées ou explicitement ouvertes et validation du propriétaire. Cette étape est désormais satisfaite pour la phase 2.
-
 ## Phase 3 — Conception sécurité et exploitation — validée au niveau documentaire
 
 Une proposition couvre l'identité et le cycle de vie des agents, le transport et l'isolation, les secrets, le cycle de vie des données, la gouvernance IA, les journaux, les incidents, l'exploitation et les responsabilités.
 
-**Résultat de revue :** principaux domaines de risque représentés au niveau conceptuel ; mécanismes, paramètres, responsables et preuve d'efficacité ont été traités dans le cadre de la conception documentaire, et la validation du propriétaire est enregistrée au niveau des documents de phase 3.
-
-**Sortie requise :** décisions attribuées, risques identifiés, vérifications mesurables définies et validation explicite du propriétaire. Cette étape est désormais satisfaite pour la phase 3.
+**Résultat de revue :** principaux domaines de risque représentés au niveau conceptuel ; mécanismes, paramètres, responsables et preuve d'efficacité ont été traités et validés dans le cadre de la conception documentaire.
 
 ## Phase 4 — Revue et porte avant réalisation — validée
 
 Clôturer l'audit REA, vérifier les coûts/licences/périmètre pilote, définir les critères de recette de conception, obtenir les approbations fonctionnelle et sécurité du propriétaire et une autorisation explicite avant toute mise en œuvre.
 
-**Révision de référence :** `morluto/rea@0909d89c966c30955fd0906b622ff25f3700789f`  
-**Validation de porte :** la revue documentaire a été clôturée et la décision de démarrer la réalisation est enregistrée.
+**Validation de porte :** cette étape est clôturée ; l'autorisation de mise en œuvre est enregistrée.
 
-## Phase 5+ — Réalisation — active sous périmètre documenté
+## Phase 5 — Réalisation contrôlée — plan finalisé, exécution conditionnelle
 
-Prototype contrôlé, agent, backend, interface, tests et déploiement sont autorisés dans le périmètre documenté après validation explicite de la phase 4. Aucun code applicatif ou test sur cible réelle ne doit être ajouté sans correspondre aux critères de cette phase et à la révision auditée.
+La phase 5 concerne la mise en œuvre conforme à la révision REA de référence et au périmètre validé. Le plan d'implémentation est finalisé, mais la mise en œuvre réelle n'est pas déclarée terminée tant que les tests de recette et la validation explicite du propriétaire ne sont pas enregistrés.
+
+**Critères de clôture :**
+- périmètre fonctionnel et sécurité conforme ;
+- tests de recette exécutés et passés ;
+- preuves et journaux conservés ;
+- validation du propriétaire enregistrée.
 
 ## Critères transversaux
 
