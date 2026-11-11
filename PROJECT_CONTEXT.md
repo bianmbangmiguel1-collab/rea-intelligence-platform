@@ -12,9 +12,10 @@
 
 ## Statut actuel
 
-- Phase active : **phase 2 — spécifications fonctionnelles et conception logique ; revue documentaire préparatoire effectuée**.
+- Phase active : **phase 3 — conception sécurité et exploitation ; phase 2 validée par le propriétaire**.
 - Phase 1 — audit technique REA : **incomplète** ; aucune révision de référence ni rapport d'audit n'est consigné.
-- Phase 3 — sécurité et exploitation : **conception et revue documentaire préliminaires effectuées ; décisions et validation du propriétaire ouvertes**.
+- Phase 2 — spécifications fonctionnelles et conception logique : **validée** ; la base conceptuelle est retenue comme point de départ documenté.
+- Phase 3 — sécurité et exploitation : **en cours de finalisation documentaire** ; décisions et validation du propriétaire à poursuivre avant toute mise en œuvre.
 - Phase 4 — porte avant réalisation : **non franchie**.
 - Code applicatif, installation d'outils, exécution de REA, analyse d'une cible réelle et déploiement : **non effectués**. Ils ne commencent pas tant que les portes du dépôt ne sont pas satisfaites.
 - Les commandes, capacités, formats, transports, sessions, preuves et prérequis REA issus de notes antérieures restent des **hypothèses** jusqu'à audit d'une révision précise.
@@ -37,12 +38,12 @@ Les technologies de stockage, file, identité, transport et hébergement demeure
 | --- | --- | --- |
 | 0 | Cadrage initial et dépôt documentaire | Terminé au niveau initial |
 | 1 | Audit reproductible d'une révision précise de REA | Incomplet / dépendance ouverte |
-| 2 | Spécifications fonctionnelles et conception logique | Revue documentaire effectuée ; validation du propriétaire et arbitrages en attente |
-| 3 | Conception détaillée sécurité, agent et exploitation | Conception/revue préliminaires effectuées ; décisions et validation ouvertes |
+| 2 | Spécifications fonctionnelles et conception logique | Validée par le propriétaire |
+| 3 | Conception détaillée sécurité, agent et exploitation | En cours ; revue documentaire effectuée, décisions restantes |
 | 4 | Revue de conception et décision de démarrer la réalisation | Bloquée ; prérequis non clos et validation explicite absente |
 | 5+ | Développement, tests et déploiement | Pas commencé / bloqué par les portes du projet |
 
-Les critères applicables sont dans [`docs/06-roadmap/roadmap.md`](docs/06-roadmap/roadmap.md). Les avis de revue sont consignés dans [`docs/03-governance/phase-review.md`](docs/03-governance/phase-review.md). La demande de démarrage du codage ne clôt pas l'audit REA ni les validations fonctionnelles et sécurité exigées par les règles du dépôt.
+Les critères applicables sont dans [`docs/06-roadmap/roadmap.md`](docs/06-roadmap/roadmap.md). Les avis de revue sont consignés dans [`docs/03-governance/phase-review.md`](docs/03-governance/phase-review.md).
 
 ## Questions prioritaires ouvertes
 
@@ -58,11 +59,11 @@ Les critères applicables sont dans [`docs/06-roadmap/roadmap.md`](docs/06-roadm
 
 ## Prochaine action
 
-Le propriétaire examine les [revues fonctionnelle, sécurité et de phase](docs/03-governance/phase-review.md) et consigne ses décisions. Ensuite, choisir une révision immuable de REA et produire un audit sourcé ; préciser les décisions de phase 3 et les critères de vérification. La réalisation demeure bloquée jusqu'à satisfaction de la porte de phase 4 et des règles `AGENTS.md`.
+Le propriétaire confirme ou complète les décisions de sécurité et d'exploitation dans la [revue de phase](docs/03-governance/phase-review.md) et dans le [registre des décisions](docs/03-governance/owner-decision-record.md). Ensuite, choisir une révision immuable de REA et produire le rapport d'audit sourcé avant toute étape de mise en œuvre.
 
 ## Journal de continuité
 
-- Le dépôt contient une première spécification fonctionnelle, une architecture logique, une analyse de menace initiale, un modèle conceptuel, des contrats API proposés, une roadmap et des ADR.
-- La documentation comprend une charte, un index documentaire, un plan d'audit REA, un registre initial des risques, une gouvernance données/IA, un cadre de traçabilité/validation, un agenda et une conception sécurité/exploitation préliminaire.
-- Cette tâche ajoute les revues documentaires fonctionnelle et sécurité ainsi qu'un relevé explicite de l'état des portes.
+- Le dépôt contient une première spécification fonctionnelle, une architecture logique, une analyse de menace initiale, un modèle conceptuel, des contrats API proposés, une roadmap et des ADR de cadrage.
+- La documentation comprend une charte, un index documentaire, un plan d'audit REA, un registre initial des risques, une gouvernance données/IA, un cadre de traçabilité/validation, un agenda et une revue documentaire de sécurité.
+- La phase 2 a été validée par le propriétaire pour la suite documentaire ; la conception de la phase 3 devient l'axe de travail suivant.
 - Aucun audit technique de REA, test, installation, analyse sur cible, développement ou déploiement n'a été effectué.

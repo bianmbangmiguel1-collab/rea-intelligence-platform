@@ -4,8 +4,9 @@ Point d'entrée documentaire de REA Intelligence Platform. Tous les documents de
 
 ## État et statut des informations
 
-- **Phase active :** phase 2, spécifications fonctionnelles et conception logique, revue documentaire effectuée.
+- **Phase active :** phase 3, conception sécurité et exploitation, après validation de la phase 2.
 - **Phase 1 — audit REA :** incomplète ; aucune révision auditée n'est enregistrée ici.
+- **Phase 2 — spécifications fonctionnelles et conception logique :** validée par le propriétaire.
 - **Phase 3 — sécurité/exploitation :** conception initiale et revue documentaire effectuées ; validation du propriétaire et décisions ouvertes.
 - **Réalisation :** bloquée ; phase 4 non franchie.
 - **Aucune implémentation, recette, installation d'outils ou exécution REA** n'est affirmée par ces documents.
@@ -17,7 +18,7 @@ Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et les règles de conti
 | Sujet | Document | Statut |
 | --- | --- | --- |
 | Vision, périmètre et limites | [Charte du projet](00-project-charter.md) | Proposition de cadrage |
-| Exigences et parcours produit | [Spécification fonctionnelle](01-specifications/functional-specification.md) | Revue de conception ; approbation propriétaire en attente |
+| Exigences et parcours produit | [Spécification fonctionnelle](01-specifications/functional-specification.md) | Validée comme base fonctionnelle |
 | Revue fonctionnelle | [Revue documentaire fonctionnelle](03-governance/functional-design-review.md) | Avis favorable sous réserves ; pas une recette |
 | Architecture logique | [Architecture détaillée](02-architecture/detailed-architecture.md) | Proposition ; intégration REA conditionnelle |
 | Sécurité | [Conception sécurité](02-architecture/security-design.md) | Analyse initiale, à compléter et valider |
