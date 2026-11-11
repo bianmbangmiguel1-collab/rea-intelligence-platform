@@ -1,6 +1,6 @@
 # Documentation du projet
 
-Point d'entrée documentaire de REA Intelligence Platform. Tous les documents de conception sont des propositions tant qu'ils ne sont pas explicitement validés ; toute affirmation sur REA reste non vérifiée jusqu'à l'audit d'une révision précise.
+Point d'entrée documentaire de REA Intelligence Platform. Tous les documents de conception sont des propositions tant qu'ils ne sont pas explicitement validés ; toute affirmation sur REA reste non vérifiée jusqu'à un audit d'une révision déterminée.
 
 ## État et statut des informations
 
@@ -24,6 +24,7 @@ Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et les règles de conti
 | Sécurité/exploitation détaillées | [Conception phase 3](03-governance/security-operations-design.md) | Proposition, décisions à valider |
 | Revue sécurité | [Revue documentaire sécurité](03-governance/security-design-review.md) | Couverture revue ; aucun contrôle technique testé |
 | Revue des portes | [Revue de phase](03-governance/phase-review.md) | Phase 4 non franchie |
+| Décisions du propriétaire | [Registre des décisions](03-governance/owner-decision-record.md) | À compléter par le propriétaire ; aucune décision présumée acceptée |
 | Arborescence cible | [Structure proposée](08-project-structure/README.md) | Documentation uniquement ; aucun squelette applicatif créé |
 | Données et IA | [Gouvernance des données et de l'IA](03-governance/data-ai-governance.md) | Politique proposée, décisions ouvertes |
 | Risques | [Registre des risques](03-governance/risk-register.md) | Initial, sans cotation validée |
@@ -46,7 +47,7 @@ Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et les règles de conti
 
 ## Prochaine séquence
 
-1. Le propriétaire répond aux points d'arbitrage dans la [revue de phase](03-governance/phase-review.md).
+1. Le propriétaire répond aux points d'arbitrage dans la [revue de phase](03-governance/phase-review.md) et consigne ses décisions dans le [registre des décisions](03-governance/owner-decision-record.md).
 2. Choisir une révision immuable de REA et compléter l'audit avec des sources datées ; distinguer examen documentaire et tests exécutés.
 3. Traiter les risques, confirmer les décisions sécurité/exploitation et définir les critères de vérification.
 4. Effectuer une revue de conception finale et demander une décision explicite avant toute éventuelle réalisation.

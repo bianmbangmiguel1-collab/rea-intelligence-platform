@@ -40,6 +40,8 @@
 6. Classification, transfert IA, consentement, fournisseur, rétention, sauvegarde et suppression.
 7. Objectifs mesurables, budget, support et risques résiduels acceptables.
 
+Utiliser le [registre des décisions du propriétaire](owner-decision-record.md) pour consigner chaque arbitrage, sa justification, son statut, son responsable et sa date. Le registre est un support vierge : il ne vaut ni approbation ni autorisation.
+
 Les réponses doivent être consignées comme décisions, propositions ou questions ouvertes. La revue documentaire par l'assistant n'est pas une validation à la place du propriétaire.
 
 ## Conditions de passage non satisfaites
