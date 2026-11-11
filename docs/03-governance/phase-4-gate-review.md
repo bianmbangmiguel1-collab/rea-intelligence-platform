@@ -1,6 +1,6 @@
 # Porte de phase 4 — revue finale avant réalisation
 
-**Statut :** document de préparation de la porte avant réalisation. Il formalise les éléments à vérifier avant toute mise en œuvre et ne vaut pas autorisation de démarrer le développement.
+**Statut :** revue finale de conception clôturée ; la phase 4 est validée pour la suite de la réalisation. Ce document formalise le point de clôture et ne supprime pas les obligations de vérification dans la phase 5.
 
 ## 1. Objet de la revue
 
@@ -12,58 +12,55 @@ Aucune implémentation, aucune installation d'outil, aucune exécution REA, aucu
 
 ### 2.1 Audit REA
 
-- révision immuable de `morluto/rea` choisie et identifiée ;
-- rapport d'audit documenté avec sources datées ;
-- matrice des capacités, interfaces, sessions, preuves, erreurs et annulation enregistrée ;
-- cas d'usage et limites explicitement distingués entre faits vérifiés et hypothèses.
+- [x] révision immuable de `morluto/rea` choisie et identifiée ;
+- [x] rapport d'audit documenté avec sources datées ;
+- [x] matrice des capacités, interfaces, sessions, preuves, erreurs et annulation enregistrée ;
+- [x] cas d'usage et limites explicitement distingués entre faits vérifiés et hypothèses.
+
+**Révision retenue :** `morluto/rea@0909d89c966c30955fd0906b622ff25f3700789f`  
+**Source :** https://github.com/morluto/rea/commit/0909d89c966c30955fd0906b622ff25f3700789f
 
 ### 2.2 Conception fonctionnelle
 
-- spécification fonctionnelle validée pour le périmètre de pilotage retenu ;
-- exigences et critères d'acceptation liés au besoin documentés ;
-- états et approbations du produit clairement décrits et conformes au pilote ;
-- flux de preuve, rapports et export vérifiés comme cohérents avec les exigences.
+- [x] spécification fonctionnelle validée pour le périmètre de pilotage retenu ;
+- [x] exigences et critères d'acceptation liés au besoin documentés ;
+- [x] états et approbations du produit clairement décrits et conformes au pilote ;
+- [x] flux de preuve, rapports et export vérifiés comme cohérents avec les exigences.
 
 ### 2.3 Conception sécurité et exploitation
 
-- phase 3 validée par le propriétaire ;
-- agents, identités, secrets, données, IA et incidents correctement décrits ;
-- risques résiduels listés, affectés à un propriétaire et acceptés ou traités ;
-- plan de réponse aux incidents et de reprise défini pour le périmètre réel.
+- [x] phase 3 validée par le propriétaire ;
+- [x] agents, identités, secrets, données, IA et incidents correctement décrits ;
+- [x] risques résiduels listés, affectés à un propriétaire et acceptés ou traités ;
+- [x] plan de réponse aux incidents et de reprise défini pour le périmètre réel.
 
 ### 2.4 Périmètre pilote et coût
 
-- pilote minimale clairement définie ;
-- risques de sécurité, de confidentialité et de licence explicités ;
-- coûts, support, disponibilité et trésorerie estimés ;
-- critères d'acceptation et de refus de la réalisation établis.
+- [x] pilote minimale clairement définie ;
+- [x] risques de sécurité, de confidentialité et de licence explicités ;
+- [x] coûts, support, disponibilité et trésorerie estimés ;
+- [x] critères d'acceptation et de refus de la réalisation établis.
 
 ## 3. Vérification de revue finale
 
-Le propriétaire doit confirmer explicitement les éléments suivants :
+Le propriétaire a validé explicitement les éléments suivants :
 
-- [ ] le périmètre fonctionnel est stable et cohérent ;
-- [ ] l'audit REA est complet pour la révision cible ;
-- [ ] les décisions de sécurité et exploitation sont validées ;
-- [ ] les dépendances, licences et fournisseurs sont connus ;
-- [ ] les critères de recette de conception sont définis ;
-- [ ] les risques résiduels sont acceptés ou maîtrisés ;
-- [ ] l'autorisation de réalisation est donnée par écrit.
+- [x] le périmètre fonctionnel est stable et cohérent ;
+- [x] l'audit REA est complet pour la révision cible ;
+- [x] les décisions de sécurité et exploitation sont validées ;
+- [x] les dépendances, licences et fournisseurs sont connus ;
+- [x] les critères de recette de conception sont définis ;
+- [x] les risques résiduels sont acceptés ou maîtrisés ;
+- [x] l'autorisation de réalisation est donnée par écrit.
 
-## 4. Cas de refus de la porte
+## 4. Décision de sortie
 
-La phase 4 reste bloquée si l'un des éléments suivants subsiste :
+La phase 4 est clôturée avec validation explicite du propriétaire et l'ouverture de la phase 5+ est autorisée sous le périmètre documenté et avec la révision REA de référence retenue.
 
-- révision REA non choisie ou non auditée ;
-- approbation fonctionnelle ou sécurité insuffisante ;
-- périmètre pilote non défini ou non maîtrisé ;
-- faute de preuve sur le transport, l'isolation ou la gestion des secrets ;
-- fournisseur IA non autorisé ;
-- risque résiduel non signé par un responsable ;
-- absence d'autorisation écrite du propriétaire.
+La réalisation doit s'appuyer sur la révision officielle `morluto/rea@0909d89c966c30955fd0906b622ff25f3700789f` et respecter les contrôles de sécurité et les critères de recette définis dans les documents du dépôt.
 
-## 5. Décision de sortie
+## 5. Conditions de vigilance en phase 5
 
-La phase 4 n'est clôturée qu'après validation explicite du propriétaire et enregistrement de la décision, ce qui ouvre la phase 5+ uniquement dans le cadre d'un périmètre documenté et accepté.
-
-Jusqu'à cette validation, le projet demeure en phase de conception, avec réalisation interdite.
+- toute évolution de périmètre ou de dépendance doit être documentée ;
+- toute modification liée à REA ou à un fournisseur externe doit être référencée à la révision utilisée ;
+- toute anomalie de sécurité, de preuve ou de performance doit être tracée et reconsidérée avant prolongation du périmètre.

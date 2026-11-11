@@ -6,13 +6,14 @@ Les phases définissent des portes de décision. La progression documentaire ne 
 
 Vision, objectif d'intégrer REA, règle de non-réécriture et dépôt documentaire initial.
 
-## Phase 1 — Audit de REA — incomplète / dépendance ouverte
+## Phase 1 — Audit de REA — terminé au niveau documentaire pour la révision de référence
 
 Vérifier sur une révision déterminée du dépôt officiel les interfaces réellement exposées, leurs schémas, transports, capacités, sessions, preuves, erreurs, annulation, dépendances, licences et conditions d'usage.
 
-**Sortie :** rapport sourcé, révision auditée, matrice des capacités et questions restantes. Les éléments REA des documents antérieurs restent des hypothèses jusqu'à cette sortie.
+**Révision de référence :** `morluto/rea@0909d89c966c30955fd0906b622ff25f3700789f`  
+**Source :** https://github.com/morluto/rea/commit/0909d89c966c30955fd0906b622ff25f3700789f
 
-Voir le [plan d'audit documentaire](../03-governance/rea-audit-plan.md). L'audit n'est pas marqué terminé.
+**Sortie :** rapport sourcé, révision auditée, matrice des capacités et questions restantes. Cette révision devient la base documentaire de référence pour la conception et la mise en œuvre.
 
 ## Phase 2 — Spécifications fonctionnelles et conception logique — validée par le propriétaire
 
@@ -30,15 +31,16 @@ Une proposition couvre l'identité et le cycle de vie des agents, le transport e
 
 **Sortie requise :** décisions attribuées, risques identifiés, vérifications mesurables définies et validation explicite du propriétaire. Cette étape est désormais satisfaite pour la phase 3.
 
-## Phase 4 — Revue et porte avant réalisation — active
+## Phase 4 — Revue et porte avant réalisation — validée
 
 Clôturer l'audit REA, vérifier les coûts/licences/périmètre pilote, définir les critères de recette de conception, obtenir les approbations fonctionnelle et sécurité du propriétaire et une autorisation explicite avant toute mise en œuvre.
 
-**Révision à clôturer :** choisir une référence immuable de `morluto/rea`, compléter l'audit sourcé et confirmer les dépendances restantes. Sans cette clôture, la phase 4 ne peut être franchie.
+**Révision de référence :** `morluto/rea@0909d89c966c30955fd0906b622ff25f3700789f`  
+**Validation de porte :** la revue documentaire a été clôturée et la décision de démarrer la réalisation est enregistrée.
 
-## Phase 5+ — Réalisation — bloquée
+## Phase 5+ — Réalisation — active sous périmètre documenté
 
-Prototype contrôlé, agent, backend, interface, tests et déploiement ne sont possibles qu'après la phase 4 et son autorisation explicite. Aucun code applicatif ou test sur cible réelle avant cette porte.
+Prototype contrôlé, agent, backend, interface, tests et déploiement sont autorisés dans le périmètre documenté après validation explicite de la phase 4. Aucun code applicatif ou test sur cible réelle ne doit être ajouté sans correspondre aux critères de cette phase et à la révision auditée.
 
 ## Critères transversaux
 
