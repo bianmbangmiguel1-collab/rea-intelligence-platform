@@ -23,6 +23,7 @@ Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et les règles de conti
 | Architecture logique | [Architecture détaillée](02-architecture/detailed-architecture.md) | Proposition ; intégration REA conditionnelle |
 | Sécurité | [Conception sécurité](02-architecture/security-design.md) | Analyse initiale, à compléter et valider |
 | Sécurité/exploitation détaillées | [Conception phase 3](03-governance/security-operations-design.md) | Proposition, décisions à valider |
+| Décision de phase 3 | [Brief de décision](03-governance/phase-3-decision-brief.md) | Proposition de travail, à confirmer par le propriétaire |
 | Revue sécurité | [Revue documentaire sécurité](03-governance/security-design-review.md) | Couverture revue ; aucun contrôle technique testé |
 | Revue des portes | [Revue de phase](03-governance/phase-review.md) | Phase 4 non franchie |
 | Décisions du propriétaire | [Registre des décisions](03-governance/owner-decision-record.md) | À compléter par le propriétaire ; aucune décision présumée acceptée |
@@ -48,7 +49,7 @@ Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et les règles de conti
 
 ## Prochaine séquence
 
-1. Le propriétaire répond aux points d'arbitrage dans la [revue de phase](03-governance/phase-review.md) et consigne ses décisions dans le [registre des décisions](03-governance/owner-decision-record.md).
+1. Le propriétaire valide les décisions de sécurité et d'exploitation dans le [brief de décision](03-governance/phase-3-decision-brief.md) et dans le [registre des décisions](03-governance/owner-decision-record.md).
 2. Choisir une révision immuable de REA et compléter l'audit avec des sources datées ; distinguer examen documentaire et tests exécutés.
 3. Traiter les risques, confirmer les décisions sécurité/exploitation et définir les critères de vérification.
 4. Effectuer une revue de conception finale et demander une décision explicite avant toute éventuelle réalisation.
