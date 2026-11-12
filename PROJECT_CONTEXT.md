@@ -18,8 +18,8 @@
 - Phase 2 — conception fonctionnelle : décrite comme validée dans les documents du projet.
 - Phase 3 — sécurité et exploitation : décrite comme validée au niveau documentaire.
 - Phase 4 — porte avant réalisation : décision du propriétaire acceptée uniquement pour le sous-périmètre local/synthétique décrit dans `docs/09-phase-5/implementation-authorization.md`. Elle ne vaut pas clôture des prérequis d'intégration REA, d'utilisation de cibles réelles ou de déploiement.
-- Phase 5 — réalisation contrôlée : autorisation limitée consignée ; aucun livrable applicatif ni résultat de test n'est encore attesté. La phase demeure non validée.
-- `AGENTS.md` autorise désormais le code et les tests locaux synthétiques dans ce périmètre, sans installation de nouvelles dépendances, lancement de REA, cible réelle, transfert externe ou déploiement.
+- Phase 5 — réalisation contrôlée : autorisation limitée consignée ; plan de travail approuvé comme plan le 2026-11-12 ; aucun livrable applicatif ni résultat de test n'est encore attesté. La phase demeure non validée.
+- `AGENTS.md` autorise le code et les tests locaux synthétiques dans ce périmètre, sans installation de nouvelles dépendances, lancement de REA, cible réelle, transfert externe ou déploiement.
 
 ## Périmètre autorisé à ce stade
 
@@ -27,7 +27,7 @@
 - Modèles de domaine, contrats de plateforme, validation d'autorisation, provenance et flux simulés avec fixtures synthétiques.
 - Tests unitaires et d'intégration isolés utilisant les outils déjà disponibles dans le dépôt/environnement autorisé.
 - Toute technologie ou dépendance nouvelle doit faire l'objet d'une décision documentée avant ajout.
-- Interdits dans ce périmètre : installer des outils/dépendances, lancer le moteur REA, exécuter des workflows dynamiques ou de provider, analyser des cibles réelles, utiliser des outils propriétaires sans licence validée, envoyer des données à l'IA ou à tout service externe, déployer.
+- Interdits dans ce périmètre : installer des outils/dépendances, lancer le moteur REA, exécuter des workflows dynamiques ou de provider, analyser des cibles réelles, utiliser des outils propriétaires sans licence validée, envoyer des données à une IA ou à tout service externe, déployer.
 
 ## Référence et dépendances
 
@@ -42,15 +42,15 @@ La révision `morluto/rea@0909d89c966c30955fd0906b622ff25f3700789f` est une réf
 | 2 | Spécifications fonctionnelles et conception logique | Décrite comme validée |
 | 3 | Conception détaillée sécurité, agent et exploitation | Décrite comme validée documentairement |
 | 4 | Revue de conception et porte avant réalisation | Autorisation restreinte pour fondations locales/synthétiques ; autres usages bloqués |
-| 5 | Développement, tests et recette | Active sous périmètre restreint ; non terminée/non validée |
+| 5 | Développement, tests et recette | Active sous périmètre restreint ; plan approuvé, non terminée/non validée |
 
 ## Prochaine action
 
-Réaliser les fondations locales/synthétiques autorisées, consigner les décisions techniques et les changements, puis exécuter les vérifications permises et joindre leurs preuves. Toute extension à l'intégration REA, aux cibles réelles, à l'installation de dépendances, aux transferts ou au déploiement nécessite audit ciblé, décision/autorisation supplémentaire et mise à jour des consignes.
+Suivre le plan de travail de phase 5, en commençant par les contrats de domaine purs. Consigner les décisions techniques et les changements, exécuter uniquement les vérifications permises et joindre leurs preuves. Toute extension de portée requiert une nouvelle autorisation.
 
 ## Journal de continuité
 
 - L'audit documentaire REA cite des sources de haut niveau épinglées mais demeure incomplet pour les contrats exacts du pilote ; aucune exécution REA n'a été effectuée.
-- Le propriétaire a explicitement demandé de réconcilier la porte de phase 4 et les consignes, et de renseigner l'autorisation. Cette autorisation est limitée au sous-périmètre ci-dessus.
-- Le protocole de recette phase 5 définit des critères et preuves attendues ; aucun cas n'est déclaré exécuté par cette modification.
+- Le propriétaire a explicitement autorisé le sous-périmètre local/synthétique et validé le plan de travail de phase 5 le 2026-11-12. Cette validation porte sur le plan, pas sur la réalisation ou la clôture.
+- Le protocole de recette phase 5 définit des critères et preuves attendues ; aucun cas n'est déclaré exécuté.
 - La phase 5 reste ouverte et non validée jusqu'à production des livrables et preuves de recette.

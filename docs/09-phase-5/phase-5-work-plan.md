@@ -1,6 +1,6 @@
 # Plan de travail et backlog initial — phase 5
 
-**Statut :** plan de travail documentaire pour le périmètre restreint autorisé. Aucun des travaux ci-dessous n'est marqué comme réalisé par la création de ce document. La phase 5 reste ouverte et non validée.
+**Statut :** plan de travail documentaire **validé par le propriétaire le 2026-11-12** pour guider le sous-périmètre restreint. Cette validation porte sur le plan, **pas sur la réalisation ni sur la clôture de la phase 5**. Aucun des travaux ci-dessous n'est marqué comme réalisé par la création ou l'approbation de ce document. La phase 5 reste ouverte et non validée.
 
 ## 1. Périmètre de référence
 

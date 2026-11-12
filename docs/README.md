@@ -8,7 +8,7 @@ Point d'entrée documentaire de REA Intelligence Platform. Les décisions et sta
 - **Phase 1 — audit REA :** commit de référence épinglé, audit documentaire partiel ; contrats/outils précis du pilote à inventorier.
 - **Phases 2 et 3 :** décrites comme validées au niveau de conception/documentation ; pas une recette technique.
 - **Phase 4 :** autorisation limitée à la portée de phase 5 locale/synthétique ; intégration REA, cibles réelles et production restent bloquées.
-- **Phase 5 :** autorisation de démarrage limitée, plan de travail et protocole de recette disponibles ; aucun livrable applicatif ou résultat de test n'est encore attesté.
+- **Phase 5 :** autorisation de démarrage limitée et plan de travail validé par le propriétaire le 2026-11-12 ; aucun livrable applicatif ou résultat de test n'est encore attesté.
 
 Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et [`AGENTS.md`](../AGENTS.md).
 
@@ -22,7 +22,7 @@ Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et [`AGENTS.md`](../AGE
 | Porte avant réalisation | [Porte de phase 4](03-governance/phase-4-gate-review.md) | Visa limité ; autres extensions bloquées |
 | Audit REA | [Plan](03-governance/rea-audit-plan.md) · [Rapport](03-governance/rea-audit-report.md) | Sources haut niveau citées ; contrats spécifiques au pilote incomplets |
 | Autorisation phase 5 | [Formulaire](09-phase-5/implementation-authorization.md) | Approuvée uniquement pour fondations locales/synthétiques |
-| Plan de travail et backlog phase 5 | [Plan de travail](09-phase-5/phase-5-work-plan.md) | À faire ; toutes les tâches sont initialement ouvertes |
+| Plan de travail et backlog phase 5 | [Plan de travail](09-phase-5/phase-5-work-plan.md) | Validé comme plan par le propriétaire ; tâches ouvertes |
 | Plan d'implémentation | [Plan](09-phase-5/phase-5-implementation-plan.md) | Plan documentaire, pas une réalisation |
 | Recette phase 5 | [Protocole](09-phase-5/phase-5-acceptance-protocol.md) | Cas et preuves proposés, aucun test exécuté |
 | Validation phase 5 | [État](09-phase-5/phase-5-validation-status.md) | Non terminée/non validée |
