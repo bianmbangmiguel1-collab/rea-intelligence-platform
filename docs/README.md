@@ -4,12 +4,12 @@ Point d'entrée documentaire de REA Intelligence Platform. Les décisions et sta
 
 ## État et statut des informations
 
-- **Phase active :** phase 5 — non réalisée et non validée.
-- **Phase 1 — audit REA :** un SHA de référence et un rapport documentaire sont présents ; le rapport identifie encore des propriétés techniques à vérifier.
-- **Phases 2 et 3 :** décrites comme validées au niveau de conception/documentation.
-- **Phase 4 :** décrite comme validée dans le document de porte ; les règles actives de `AGENTS.md` restreignent néanmoins le travail à la documentation.
-- **Phase 5 :** plan documentaire seulement ; aucun livrable applicatif ni résultat de test ou de recette n'est attesté.
-- **Règles applicables :** `AGENTS.md` interdit actuellement le code applicatif, l'installation d'outils, l'exécution de REA, l'analyse sur cible réelle et le déploiement.
+- **Phase active :** phase 5 — préparation documentaire, réalisation non commencée et non validée.
+- **Phase 1 — audit REA :** commit de référence épinglé, audit documentaire partiel ; contrats/outils précis du pilote à inventorier.
+- **Phases 2 et 3 :** décrites comme validées au niveau de conception/documentation ; pas une recette technique.
+- **Phase 4 :** validation consignée dans son document ; les éléments d'audit cochés doivent être rapprochés des preuves réellement présentes et des consignes actives.
+- **Phase 5 :** plan, autorisation vierge et protocole de recette disponibles ; aucun livrable applicatif ou résultat de test n'est attesté.
+- **Règles applicables :** `AGENTS.md` autorise actuellement la documentation seulement et interdit code applicatif, installation, exécution REA, analyse sur cible réelle et déploiement.
 
 Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et [`AGENTS.md`](../AGENTS.md).
 
@@ -20,12 +20,13 @@ Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et [`AGENTS.md`](../AGE
 | Spécification fonctionnelle | [Spécification fonctionnelle](01-specifications/functional-specification.md) | Base de conception, recette non attestée |
 | Architecture logique | [Architecture détaillée](02-architecture/detailed-architecture.md) | Proposition, intégration REA conditionnelle |
 | Sécurité | [Conception sécurité](02-architecture/security-design.md) | Analyse documentaire, contrôles techniques non testés |
-| Sécurité/exploitation | [Conception phase 3](03-governance/security-operations-design.md) | Document de conception |
-| Porte avant réalisation | [Porte de phase 4](03-governance/phase-4-gate-review.md) | Décision documentée ; prérequis à réconcilier avec les consignes actives |
-| Audit REA | [Plan d'audit](03-governance/rea-audit-plan.md) · [Rapport disponible](03-governance/rea-audit-report.md) | SHA épinglé, audit des contrats incomplet selon le rapport |
+| Porte avant réalisation | [Porte de phase 4](03-governance/phase-4-gate-review.md) | Décision documentée ; preuves et consignes à réconcilier |
+| Plan d'audit REA | [Plan](03-governance/rea-audit-plan.md) · [Rapport](03-governance/rea-audit-report.md) | Sources haut niveau citées ; contrats spécifiques au pilote incomplets |
+| Autorisation phase 5 | [Formulaire d'autorisation](09-phase-5/implementation-authorization.md) | Vierge, aucune portée approuvée par ce formulaire |
 | Plan phase 5 | [Plan d'implémentation](09-phase-5/phase-5-implementation-plan.md) | Plan documentaire, pas une réalisation |
-| État de validation phase 5 | [Constat de validation](09-phase-5/phase-5-validation-status.md) | Non réalisée / non validée, blocages consignés |
-| Phases et portes | [Roadmap](06-roadmap/roadmap.md) | Phase 5 bloquée, preuves nécessaires |
+| Recette phase 5 | [Protocole de recette](09-phase-5/phase-5-acceptance-protocol.md) | Cas et preuves proposés, aucun test exécuté |
+| Validation phase 5 | [État de validation](09-phase-5/phase-5-validation-status.md) | Bloquée / non réalisée / non validée |
+| Phases et portes | [Roadmap](06-roadmap/roadmap.md) | Audit à compléter, phase 5 bloquée |
 
 ## Règles de lecture
 
@@ -37,7 +38,7 @@ Lire aussi [`PROJECT_CONTEXT.md`](../PROJECT_CONTEXT.md) et [`AGENTS.md`](../AGE
 
 ## Prochaine séquence
 
-1. Réconcilier l'autorisation de phase 4 avec les règles de `AGENTS.md`.
-2. Compléter l'audit REA et ses sources détaillées.
-3. Reprendre la phase 5 uniquement après levée des blocages applicables.
-4. Ne conclure la phase 5 qu'après réalisation et recette prouvées.
+1. Compléter l'inventaire des opérations REA nécessaires aux besoins retenus et leurs preuves sourcées.
+2. Réconcilier l'autorisation de phase 4 avec les règles actives de `AGENTS.md`.
+3. Faire approuver un périmètre précis avec exclusions dans le formulaire d'autorisation.
+4. Reprendre la phase 5 après levée des blocages et consigner les résultats de recette avant toute clôture.

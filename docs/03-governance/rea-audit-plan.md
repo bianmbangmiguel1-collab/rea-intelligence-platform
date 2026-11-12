@@ -1,53 +1,53 @@
 # Plan documentaire d'audit de REA
 
-**Statut :** protocole proposé ; l'audit n'a pas été exécuté. Aucun comportement, outil, transport ou prérequis du moteur n'est tenu pour vérifié par ce document.
+**Statut :** protocole proposé ; audit documentaire partiel consigné dans le [rapport de référence](rea-audit-report.md). Aucune installation, exécution de REA ni analyse de cible n'est attestée par ce plan.
 
 ## Objectif et limites
 
-Produire un rapport reproductible sur une révision précisément identifiée de `morluto/rea`, afin de savoir si et comment une intégration pourrait être conçue. L'audit ne modifie pas le dépôt externe, ne lance pas REA contre une cible réelle, n'installe pas de dépendance et n'autorise pas une analyse de cible. Toute étape nécessitant une exécution ou une installation doit faire l'objet d'une autorisation et d'un plan distincts ; elle est hors du travail documentaire actuel.
+Produire un rapport reproductible sur une révision précisément identifiée de `morluto/rea`, afin de savoir si et comment une intégration pourrait être conçue. L'audit ne modifie pas le dépôt externe et ne lance pas l'outil. Un examen de sources est distinct d'un test d'exécution et d'un audit de sécurité indépendant.
 
-## Identité de la révision — à renseigner avant audit
+## Identité de la révision
 
 | Champ | Valeur |
 | --- | --- |
 | URL du dépôt source | `https://github.com/morluto/rea` |
-| Tag, commit immuable ou autre identifiant exact | À choisir ; non renseigné |
-| Date de consultation | À renseigner |
-| Sources consultées (chemins/URL) | À renseigner |
-| Auditeur et limites de l'examen | À renseigner |
-| Licence et avis associés | À vérifier et citer |
+| Commit immuable | `0909d89c966c30955fd0906b622ff25f3700789f` |
+| URL commit | `https://github.com/morluto/rea/commit/0909d89c966c30955fd0906b622ff25f3700789f` |
+| Date du commit consultée | `2026-11-11T15:49:30Z` |
+| Sources de haut niveau consultées | README, package.json, server.json, mcp.json, référence MCP, guides CLI/installation, SECURITY, DISCLAIMER, LICENSE, THIRD_PARTY_NOTICES et guide native-initializers ; liens épinglés dans le rapport. |
+| Auditeur / limites | Revue documentaire assistée ; aucun test, installation, lancement ou validation juridique. |
+| Licence | Fichier LICENSE déclare MIT pour le code REA-authored ; les composants et outils tiers gardent leurs propres licences/conditions ; voir THIRD_PARTY_NOTICES. |
 
 Ne pas agréger les observations de versions différentes. Si la révision change, créer un rapport distinct ou documenter explicitement la comparaison.
 
-## Axes d'examen et preuves attendues
+## État des axes
 
-| Axe | Éléments à relever | État actuel |
+| Axe | Preuve attendue | État actuel |
 | --- | --- | --- |
-| Interface publique | CLI, API, MCP ou autres interfaces réellement déclarées ; sources et schémas | Non vérifié |
-| Transport et cycle de vie | Modes de connexion, lancement, arrêt, annulation et timeouts si documentés | Non vérifié |
-| Entrées/sorties | Schémas, erreurs, statuts, résultats partiels et compatibilité | Non vérifié |
-| Capacités et providers | Noms exacts, conditions, versions, systèmes et limites observés | Non vérifié |
-| Sessions et preuves | Identifiants, persistance, provenance et formats effectivement exposés | Non vérifié |
-| Dépendances et installation | Prérequis déclarés, versions, provenance et risques de licence | Non vérifié |
-| Compatibilité | Matrice documentée par OS, architecture et versions requises | Non vérifié |
-| Sécurité | Permissions nécessaires, accès réseau/fichiers, frontières et contrôles observables | Non vérifié |
-| Maintenance | Versions, changements incompatibles et politique de mise à jour si disponibles | Non vérifié |
+| Interface MCP/CLI | catalogue exhaustif, source et schémas par opération | Partiel : protocole et exemples publics consultés ; catalogue complet non inventorié |
+| Transport et cycle de vie | modes exacts, lancement, arrêt, annulation et timeouts, par workflow | Partiel ; stdio documenté, limites HTTP relevées ; opérations individuelles à examiner |
+| Entrées/sorties | schémas et erreurs exacts, résultats partiels et compatibilité | Partiel : règles communes Evidence documentées, fiches outil manquantes |
+| Capacités et providers | opérations exactes, conditions, versions, OS et limites | Partiel : familles générales au README, mapping exhaustif non fait |
+| Sessions et preuves | identifiants, persistance, provenance et formats effectivement exposés | Partiel : Evidence/MCP documentés à haut niveau, tests et mapping plateforme absents |
+| Dépendances et installation | inventaire de versions, provenance, licences, conditions | Partiel : manifestes et notices lus, audit juridique exhaustif non effectué |
+| Compatibilité | matrice sourcée par OS, architecture, runtime et provider | Incomplète ; exigences runtime principales connues, compatibilité du pilote non démontrée |
+| Sécurité | permissions, accès réseau/fichiers, frontières et contrôles observables | Revue documentaire de SECURITY/DISCLAIMER ; pas d'audit technique ni test d'efficacité |
+| Maintenance | changements, politique de mise à jour et compatibilité | Partiel ; référence épinglée, politique par usage à préciser |
+| Exécution et annulation | effets, refus, interruption, arrêt et résultat partiel de chaque opération | Non testé ; garanties doivent rester propres à l'opération/provider |
 
 ## Méthode de consignation
 
-Pour chaque constat, consigner : identifiant, statut (`vérifié`, `hypothèse`, `inconnu`, `non applicable`), formulation précise, source et chemin, révision de la source, date de consultation, contexte et limites. Une documentation du dépôt constitue une preuve de ce qui est déclaré, pas nécessairement une preuve d'exécution ou de compatibilité. Une absence de mention est `inconnue`, pas une preuve d'absence.
-
-Ne pas recopier des commandes d'anciennes notes comme procédure validée. Si une commande est découverte lors d'un audit ultérieurement autorisé, la citer avec source/version et indiquer si elle a été seulement documentée ou effectivement vérifiée.
+Pour chaque constat, consigner : ID, statut (`vérifié documentairement`, `hypothèse`, `inconnu`, `non applicable`, `non testé`), formulation précise, URL/path, commit source, date de consultation, effet sur le produit et vérification suivante. Une affirmation provenant d'une page générale ne doit pas être extrapolée à tous les outils.
 
 ## Livrables de sortie
 
-1. Révision et sources identifiées.
-2. Matrice des interfaces, capacités et prérequis, avec statut et preuve par ligne.
-3. Analyse des licences, dépendances et limites d'utilisation.
-4. Écarts entre les besoins plateforme et les contrats observés.
-5. Risques, inconnues, recommandations d'intégration et questions à faire trancher.
-6. Conclusion : compatible sous conditions, incompatible ou indéterminé — avec justification et sans extrapolation.
+1. révision et sources identifiées ;
+2. matrice des opérations nécessaires au pilote, avec contrat et preuve par ligne ;
+3. analyse des licences pour les seuls composants réellement retenus ;
+4. écarts entre besoins et contrats observés ;
+5. risques, inconnues, recommandations et décisions à faire trancher ;
+6. conclusion distincte : faisabilité documentaire, validation technique, compatibilité et autorisation d'usage.
 
 ## Porte de clôture
 
-La phase d'audit ne peut être marquée terminée que si la révision est épinglée, les axes pertinents sont sourcés, les inconnues sont explicites, la revue des licences est documentée et le rapport est relu. La clôture de cet audit ne clôt pas la conception ni n'autorise automatiquement le développement.
+La phase d'audit ne peut être marquée terminée que si les axes nécessaires au périmètre sont sourcés, les inconnues visibles, la licence vérifiée au niveau pertinent et la conclusion revue par le propriétaire. Un test ou une exécution doit être planifié et autorisé séparément ; aucune exécution de cible réelle n'est implicite.
