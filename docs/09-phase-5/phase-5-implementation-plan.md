@@ -1,102 +1,54 @@
 # Plan d'implémentation — phase 5
 
-**Statut :** plan de mise en œuvre finalisé à titre documentaire. Ce document ne vaut ni validation de recette ni autorisation d'exécution sur cible réelle. Il sert à cadrer la phase 5 et à formaliser les vérifications minimales avant la mise en œuvre.
+**Statut :** plan de mise en œuvre documentaire ; réalisation non commencée et phase non validée. Ce document ne vaut ni validation de recette ni autorisation de contourner les consignes actuelles du dépôt.
 
 ## 1. Objet
 
-La phase 5 vise la réalisation contrôlée de la plateforme sur la base de la révision REA de référence et des décisions validées des phases 2 à 4. Cette phase doit rester limitée au périmètre documenté, sans extension implicite et sans exécution d'analyse sur cible réelle non autorisée.
+La phase 5 vise la réalisation contrôlée de la plateforme sur la base de la révision REA de référence et des décisions validées des phases 2 à 4. La phase ne peut être clôturée qu'après production des livrables et vérification documentée des critères d'acceptation.
 
-## 2. Périmètre autorisé
+## 2. Périmètre envisagé
 
-### 2.1 Inclusions autorisées
+Les composants ci-dessous sont des livrables futurs, non présents ni réalisés à la date de cette revue :
+- squelette applicatif minimal ;
+- contrats et modèles de domaine consolidés ;
+- backend central pour projets, tâches et preuves ;
+- agent local et orchestration, si autorisés et compatibles ;
+- adaptateur REA isolé, sans modification du dépôt externe ;
+- journaux, preuves, rapports et tests contrôlés.
 
-- création du squelette applicatif documenté ;
-- backend central et modules métier selon la conception validée ;
-- interface utilisateur ou façade de contrôle conforme aux exigences ;
-- service d'agent local ou runner avec isolation et politique d'autorisation ;
-- adaptateur REA isolé, sous révision de référence et sans modification du dépôt externe ;
-- contrats de plateforme, journaux, preuve et rapports ;
-- tests sécurisés, contrôlés et sans cible réelle par défaut.
+Les exclusions restent : pas d'exécution de fichiers importés, pas de cible réelle sans autorisation expresse, pas de transfert IA non approuvé, pas de production avant recette.
 
-### 2.2 Exclusions explicites
+## 3. Dépendances et blocages actuels
 
-- aucune exécution de REA sur une cible réelle non autorisée ;
-- aucune exécution automatique de fichiers ou archives importées ;
-- aucune collecte ou transfert de données hors périmètre ;
-- aucun fournisseur IA non autorisé dans la politique de données ;
-- aucun changement de révision REA sans revalidation documentaire ;
-- aucun déploiement production tant que la recette de phase 5 n'est pas satisfaite.
+- `AGENTS.md` autorise actuellement le travail documentaire seulement et interdit explicitement code applicatif, installation, exécution REA, analyse réelle et déploiement.
+- Le rapport d'audit disponible épingle `morluto/rea@0909d89c966c30955fd0906b622ff25f3700789f`, mais identifie plusieurs propriétés d'intégration comme restant à vérifier ; le commit SHA seul n'est pas une matrice d'audit complète.
+- Aucun artefact applicatif, résultat de test ou rapport de recette n'est consigné.
 
-## 3. Livrables attendus
+Ces points doivent être résolus avant une mise en œuvre ou une validation de phase 5.
 
-1. squelette applicatif minimal conforme à l'arborescence cible ;
-2. contracts et modèles de domaine consolidés ;
-3. backend central avec gestion des projets, tâches et preuves ;
-4. agent local et orchestration des tâches ;
-5. gestion de permissions et de preuve ;
-6. interfaces de suivi et de rapport ;
-7. tests de sécurité, intégration et recette ;
-8. procédure d'exploitation et de reprise ;
-9. journal de validation et de décision.
+## 4. Séquence proposée après levée des blocages
 
-## 4. Ordre de mise en œuvre
-
-### Bloc 1 — fondations
-
-- définir les conventions de projet ;
-- créer les dossiers applicatifs et le périmètre de travail ;
-- établir les dépendances minimales, sans secret ni configuration sensible ;
-- choisir les outils de validation autorisés dans le périmètre.
-
-### Bloc 2 — contrats et domaine
-
-- stabiliser les modèles de projet, tâche, preuve et autorisation ;
-- normaliser les états de workflow ;
-- définir les règles de validation de périmètre et de permissions.
-
-### Bloc 3 — backend et flux
-
-- mettre en place le backend central ;
-- gérer l'injection de tâches et la traçabilité ;
-- stocker fossiles minimaux et preuves dans un schéma contrôlé ;
-- documenter les erreurs et états partiels.
-
-### Bloc 4 — agent et adaptateur
-
-- isoler l'adaptateur REA ;
-- définir la frontière d'intégration et la politique d'autorisation ;
-- valider le comportement dans un environnement contrôlé ;
-- ne pas modifier le dépôt `morluto/rea`.
-
-### Bloc 5 — sécurité et validation
-
-- tests d'autorisation inter-projets ;
-- tests d'absence d'exécution automatique ;
-- tests d'intégrité et de preuve ;
-- revue de journaux, secrets et exfiltration ;
-- préparation de la recette de livraison.
+1. Définir les décisions techniques et le périmètre minimal approuvés.
+2. Créer le squelette applicatif minimal et les contrats de domaine.
+3. Implémenter les fonctions de projet, autorisation, tâches et provenance.
+4. Ajouter l'adaptateur REA uniquement après vérification de ses interfaces sur la révision épinglée.
+5. Ajouter des tests synthétiques contrôlés, puis les vérifications de sécurité prévues.
+6. Consigner les résultats, défauts ouverts, limites et approbation de recette.
 
 ## 5. Critères de validation de phase 5
 
-La phase 5 ne peut être déclarée satisfaite qu'après vérification des éléments suivants :
+La phase ne peut être déclarée satisfaite qu'après preuve de chacun de ces critères :
 
-- [ ] le périmètre est conforme au dépôt et aux décisions validées ;
-- [ ] la révision REA de référence est utilisée et tracée ;
-- [ ] les tests de sécurité sont exécutés et documentés ;
-- [ ] les opérations non autorisées sont rejetées par conception ;
-- [ ] les journaux, preuves et rapports sont conservés sans secret ;
-- [ ] les données traitées restent dans le périmètre déclaré ;
-- [ ] la validation du propriétaire est enregistrée avant toute utilisation réelle.
+- [ ] livrables réalisés et versionnés selon le périmètre approuvé ;
+- [ ] intégration traçable à la révision REA auditée et aux sources des interfaces utilisées ;
+- [ ] critères fonctionnels exécutés, résultats et écarts consignés ;
+- [ ] tests de sécurité exécutés dans un environnement autorisé, avec preuves ;
+- [ ] refus des opérations non autorisées démontré ;
+- [ ] journaux, preuves et rapports inspectés pour absence de secrets ;
+- [ ] flux et conservation des données vérifiés par rapport au périmètre ;
+- [ ] défauts et risques résiduels traités ou explicitement acceptés ;
+- [ ] validation finale du propriétaire enregistrée après examen des résultats.
 
-## 6. Risques et garde-fous
+## 6. État de la validation
 
-- changement de périmètre non documenté ;
-- dépendance externe non référencée ;
-- fuite de secrets ou exécution non contrôlée ;
-- mauvaises hypothèses sur les interfaces REA ;
-- tests insuffisants sur la sécurité de l'agent ;
-- résultats d'analyse présentés comme faits alors qu'ils ne sont pas validés.
-
-## 7. Décision de clôture
-
-Ce document clôture le plan préparationnel de la phase 5. Il ne remplace ni la validation technique, ni la recette, ni l'approbation explicite du propriétaire. La phase 5 ne peut être déclarée terminée qu'après exécution des tests validés et enregistrement formel de la recette.
+À la date de ce document, aucun critère de réalisation ci-dessus ne dispose d'une preuve de recette dans le dépôt. La phase 5 demeure **non commencée/non validée**. Voir [l'état de validation](phase-5-validation-status.md).
