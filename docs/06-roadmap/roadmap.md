@@ -20,22 +20,21 @@ Les exigences et documents associés sont consignés comme base de conception. C
 
 La conception documentaire existe. L'efficacité de contrôles techniques n'a pas été démontrée par les documents consultés.
 
-## Phase 4 — Revue et porte avant réalisation — décision documentée, exigences à réconcilier
+## Phase 4 — Revue et porte avant réalisation — autorisation restreinte enregistrée
 
-Le document de porte consigne une validation. Toutefois, certains critères cochés — notamment l'audit complet et sa matrice — n'étaient pas soutenus par le rapport antérieur. La portée d'implémentation doit aussi être conciliée avec les consignes actives de `AGENTS.md` avant tout code.
+Le propriétaire a autorisé un sous-périmètre initial local/synthétique décrit dans `docs/09-phase-5/implementation-authorization.md`. Les intégrations REA, cibles réelles, installations de dépendances, transferts externes et déploiements restent bloqués ; leurs prérequis spécifiques ne sont pas réputés satisfaits.
 
-## Phase 5 — Réalisation contrôlée — non commencée / non validée
+## Phase 5 — Réalisation contrôlée — démarrage restreint autorisé ; non validée
 
-Un plan et un protocole de recette existent ; aucun livrable applicatif ni rapport de test n'est attesté. `AGENTS.md` interdit actuellement l'implémentation, l'installation, l'exécution de REA, l'analyse sur cible réelle et le déploiement.
+La phase peut démarrer pour produire des fondations locales, mono-utilisateur, sans nouvel outil/dépendance, sans exécution REA ni données réelles. Aucun livrable de réalisation ni résultat de test n'est encore attesté dans le statut courant.
 
-**Conditions de reprise :**
-1. compléter l'audit documentaire des opérations REA nécessaires au pilote ;
-2. résoudre la contradiction entre la porte de phase 4 et les règles actives de `AGENTS.md` par une décision appropriée du propriétaire ;
-3. remplir le formulaire d'autorisation avec un périmètre précis et ses exclusions ;
-4. produire les livrables contrôlés et exécuter uniquement des tests approuvés ;
-5. consigner preuves, résultats, anomalies et approbation de recette du propriétaire.
+**Conditions de clôture :**
+1. livrables effectivement réalisés et versionnés dans la portée approuvée ;
+2. tests autorisés exécutés et leurs résultats/preuves expurgées consignés ;
+3. anomalies et risques résiduels traités ou explicitement décidés ;
+4. revue et validation finale du propriétaire après examen des preuves.
 
-La phase 5 ne peut être déclarée terminée par la finalisation d'un plan ou d'une checklist seulement. Voir le [protocole de recette](../09-phase-5/phase-5-acceptance-protocol.md) et l'[état de validation](../09-phase-5/phase-5-validation-status.md).
+Voir le [protocole de recette](../09-phase-5/phase-5-acceptance-protocol.md) et l'[état de validation](../09-phase-5/phase-5-validation-status.md). Un plan ou un visa de démarrage n'est pas une validation finale.
 
 ## Critères transversaux
 

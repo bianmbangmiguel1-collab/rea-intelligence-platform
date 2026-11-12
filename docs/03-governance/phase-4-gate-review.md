@@ -1,66 +1,34 @@
-# Porte de phase 4 — revue finale avant réalisation
+# Porte de phase 4 — revue et autorisation de réalisation
 
-**Statut :** revue finale de conception clôturée ; la phase 4 est validée pour la suite de la réalisation. Ce document formalise le point de clôture et ne supprime pas les obligations de vérification dans la phase 5.
+**Statut :** décision du propriétaire enregistrée pour un sous-périmètre initial limité. Cette décision n'atteste pas que tous les prérequis d'intégration REA, de test sur cible réelle ou de production sont satisfaits.
 
-## 1. Objet de la revue
+## 1. Objet
 
-La phase 4 sert à vérifier que les dépendances de conception sont bien closes, que le pilote et les risques ont été arbitrés, que les approbations nécessaires sont données et que la réalisation est encore rationnelle et maîtrisée.
+La porte phase 4 sépare la conception de la réalisation. Elle peut autoriser un sous-périmètre contrôlé tout en laissant bloquées des dépendances non nécessaires à ce sous-périmètre. Chaque extension exige une revue et une autorisation distinctes.
 
-Aucune implémentation, aucune installation d'outil, aucune exécution REA, aucune analyse sur cible réelle ni aucun déploiement n'est autorisé avant la clôture de cette phase.
+## 2. État des critères généraux
 
-## 2. Conditions minimales de clôture
+| Critère | État | Périmètre / preuve |
+| --- | --- | --- |
+| Périmètre fonctionnel stable | Partiellement satisfait | Fondations locales mono-utilisateur seulement ; pilote complet et cas d'usage REA restent à arbitrer. |
+| Révision REA immuable | Satisfaite comme référence documentaire | `morluto/rea@0909d89c966c30955fd0906b622ff25f3700789f`. |
+| Audit exhaustif des interfaces/capacités | Non satisfait | Le rapport documentaire identifie des sources générales ; catalogue et contrats exacts du pilote restent ouverts. |
+| Conception fonctionnelle | Acceptée comme base documentaire | Ne constitue pas recette technique ni approbation de toutes fonctionnalités en production. |
+| Conception sécurité/exploitation | Acceptée pour le périmètre restreint | Cible réelle, agent connecté, transport externe, IA et déploiement restent hors portée. |
+| Dépendances/licences | Partiellement vérifiées | MIT REA-authored documenté ; dépendances exactes utilisées et tout outil tiers restent à vérifier avant adoption. |
+| Critères de recette | Définis comme protocole | Aucun résultat de test n'est revendiqué ; recette phase 5 à exécuter. |
+| Risques résiduels | Non clos globalement | Les risques de portée étendue restent ouverts et non acceptés par cette décision restreinte. |
 
-### 2.1 Audit REA
+## 3. Décision de sortie — sous-périmètre initial
 
-- [x] révision immuable de `morluto/rea` choisie et identifiée ;
-- [x] rapport d'audit documenté avec sources datées ;
-- [x] matrice des capacités, interfaces, sessions, preuves, erreurs et annulation enregistrée ;
-- [x] cas d'usage et limites explicitement distingués entre faits vérifiés et hypothèses.
+À la demande explicite du propriétaire dans la conversation du 2026-11-12, la porte autorise uniquement la phase 5 locale/synthétique définie dans [`implementation-authorization.md`](../09-phase-5/implementation-authorization.md).
 
-**Révision retenue :** `morluto/rea@0909d89c966c30955fd0906b622ff25f3700789f`  
-**Source :** https://github.com/morluto/rea/commit/0909d89c966c30955fd0906b622ff25f3700789f
+Cette décision n'autorise pas : l'exécution de REA, l'intégration opérationnelle à son catalogue, l'analyse de cible réelle, l'installation de nouveaux outils/dépendances, les transferts externes, ni le déploiement. La phase 4 demeure ouverte pour ces extensions tant que leurs critères spécifiques ne sont pas satisfaits.
 
-### 2.2 Conception fonctionnelle
+## 4. Visa / traçabilité
 
-- [x] spécification fonctionnelle validée pour le périmètre de pilotage retenu ;
-- [x] exigences et critères d'acceptation liés au besoin documentés ;
-- [x] états et approbations du produit clairement décrits et conformes au pilote ;
-- [x] flux de preuve, rapports et export vérifiés comme cohérents avec les exigences.
-
-### 2.3 Conception sécurité et exploitation
-
-- [x] phase 3 validée par le propriétaire ;
-- [x] agents, identités, secrets, données, IA et incidents correctement décrits ;
-- [x] risques résiduels listés, affectés à un propriétaire et acceptés ou traités ;
-- [x] plan de réponse aux incidents et de reprise défini pour le périmètre réel.
-
-### 2.4 Périmètre pilote et coût
-
-- [x] pilote minimale clairement définie ;
-- [x] risques de sécurité, de confidentialité et de licence explicités ;
-- [x] coûts, support, disponibilité et trésorerie estimés ;
-- [x] critères d'acceptation et de refus de la réalisation établis.
-
-## 3. Vérification de revue finale
-
-Le propriétaire a validé explicitement les éléments suivants :
-
-- [x] le périmètre fonctionnel est stable et cohérent ;
-- [x] l'audit REA est complet pour la révision cible ;
-- [x] les décisions de sécurité et exploitation sont validées ;
-- [x] les dépendances, licences et fournisseurs sont connus ;
-- [x] les critères de recette de conception sont définis ;
-- [x] les risques résiduels sont acceptés ou maîtrisés ;
-- [x] l'autorisation de réalisation est donnée par écrit.
-
-## 4. Décision de sortie
-
-La phase 4 est clôturée avec validation explicite du propriétaire et l'ouverture de la phase 5+ est autorisée sous le périmètre documenté et avec la révision REA de référence retenue.
-
-La réalisation doit s'appuyer sur la révision officielle `morluto/rea@0909d89c966c30955fd0906b622ff25f3700789f` et respecter les contrôles de sécurité et les critères de recette définis dans les documents du dépôt.
-
-## 5. Conditions de vigilance en phase 5
-
-- toute évolution de périmètre ou de dépendance doit être documentée ;
-- toute modification liée à REA ou à un fournisseur externe doit être référencée à la révision utilisée ;
-- toute anomalie de sécurité, de preuve ou de performance doit être tracée et reconsidérée avant prolongation du périmètre.
+- Décideur indiqué par le contexte de session : propriétaire du dépôt (`bianmbangmiguel1-collab`).
+- Date de décision conversationnelle : 2026-11-12.
+- Portée acceptée : fondations locales et tests sur fixtures synthétiques, sans nouvelles dépendances ni exécution REA.
+- Source : demande explicite de réconcilier les consignes et de renseigner l'autorisation.
+- Limite : validation documentaire de cette portée seulement ; aucun livrable ou résultat de recette n'est attesté par ce visa.
